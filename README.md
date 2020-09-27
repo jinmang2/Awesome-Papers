@@ -82,7 +82,7 @@ project: ShallowMinded
 
 - [x] 20.09.21;	WaveNet: A generative model for raw audio (16.09.08) [post](https://deepmind.com/blog/article/wavenet-generative-model-raw-audio)
   - [ ] **WaveNet**; *WAVENET: A GENERATIVE MODEL FOR RAW AUDIO* (16.09.19, arxiv) [paper](https://arxiv.org/pdf/1609.03499.pdf)
-  - [Google Voice Searcj](https://ai.googleblog.com/2015/09/google-voice-search-faster-and-more.html)
+  - [Google Voice Search](https://ai.googleblog.com/2015/09/google-voice-search-faster-and-more.html)
   - [Speech Synthesis](https://en.wikipedia.org/wiki/Speech_synthesis)
   -  [ ] **Concatenative TTS**; *Unit selection in a concatenative speech synthesis system using a large speech database* (IEEE 96.05.09) [link](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=Es-YRKMAAAAJ&citation_for_view=Es-YRKMAAAAJ:u5HHmVD_uO8C)
   - [ ] **Parametric TTS**; *Statistical parametric speech synthesis* (Elsevier Science Publishers BV 09.11.01) [link](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=z3IRvDwAAAAJ&citation_for_view=z3IRvDwAAAAJ:d1gkVwhDpl0C)
@@ -105,6 +105,8 @@ project: ShallowMinded
 - [x] 20.09.25;	DeepMind and Blizzard to release StarCraft II as an AI research environment (16.11.04) [post](https://deepmind.com/blog/announcements/deepmind-and-blizzard-release-starcraft-ii-ai-research-environment)
 
 - [ ] 20.09.26;	Reinforcement learning with unsupervised auxiliary tasks (16.11.17) [post](https://deepmind.com/blog/article/reinforcement-learning-unsupervised-auxiliary-tasks)
+  - [ ] **UNREAL Agent**; *REINFORCEMENT LEARNING WITH UNSUPERVISED AUXILIARY TASKS* (16.11.16, arxiv) [paper](https://arxiv.org/pdf/1611.05397.pdf)
+  - with A3C
 
 ## :chart_with_upwards_trend: Financial Mathematics & Engineer
 
