@@ -1,4 +1,5 @@
-# Awesome Papers
+# Awesome-Papers
+:bulb: To be AI Researcher
 
 ## NLP
 
@@ -11,6 +12,8 @@ and their Compositionality
 ## Generative Model
 
 ## Reinforcement Learning - Theorem
+
+## Financial Mathematics & Engineer
 
 ## Conversational AI
 
