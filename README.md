@@ -1,26 +1,26 @@
 # Awesome-Papers
 :bulb: To be AI Researcher
 
-## NLP
+## :office: NLP
 
-### :smile: Word Vector Representation
+### Word Vector Representation
 Distributed Representations of Words and Phrases
 and their Compositionality
 
-### :laughing: Natural Langauge Understanding
+### Natural Langauge Understanding
 
-## Generative Model
+## :art: Generative Model
 
-### :smile: GAN
+### GAN
 
-## Reinforcement Learning - Theorem
+## :brain: Reinforcement Learning
 
-## Financial Mathematics & Engineer
+## :information_source: DeepMind
 
-## Conversational AI
+## :chart_with_upwards_trend: Financial Mathematics & Engineer
 
-## DeepMind
+## :massage: Conversational AI
 
-## Theoretical Deep Learning
+## :cat2: Theoretical Deep Learning
 
-## Schmidhuber :heart_eyes:
+## :heart_eyes: Schmidhuber
