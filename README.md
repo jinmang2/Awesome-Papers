@@ -3,13 +3,15 @@
 
 ## NLP
 
-### Word Vector Representation
+### :smile: Word Vector Representation
 Distributed Representations of Words and Phrases
 and their Compositionality
 
-### Natural Langauge Understanding
+### :laughing: Natural Langauge Understanding
 
 ## Generative Model
+
+### :smile: GAN
 
 ## Reinforcement Learning - Theorem
 
