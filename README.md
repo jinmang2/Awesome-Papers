@@ -15,7 +15,16 @@
   - NPLM's Reference -> word sequence distribution의 statistical model을 학습
     - [ ] *Sequential neural text compression* (IEEE 1996) [link](https://pubmed.ncbi.nlm.nih.gov/18255564/)
       - I Love Schmidhuber a lot :)
-- [x] *Distributed Representations of Words and Phrases and their Compositionality*
+- [x] **Word2Vec 2013a**; *Efficient Estimation of Word Representations in Vector Space* (ICLR 2013) [paper](https://arxiv.org/pdf/1301.3781.pdf)
+  - Introduce `Skip-Gram` & `CBOW`
+  - Google Team
+- [x] **Word2Vec 2013b**; *Distributed Representations of Words and Phrases and their Compositionality* (NIPS 2013) [paper](https://papers.nips.cc/paper/5021-distributed-representations-of-words-and-phrases-and-their-compositionality.pdf)
+  - Propose train optimization method such as `negative sampling`
+- [ ] **GloVe(Global Word Vectors)**; *GloVe: Global Vectors for Word Representation* (ACL 2014) [paper](https://nlp.stanford.edu/pubs/glove.pdf)
+  - Stanford Univ.
+  - Overcome `Word2Vec` and `LSA`
+- [ ] **Swivel(Submatrix-Wise Vector Embedding Learner)**; *Swivel: Improving Embeddings by Noticing What’s Missing* () [paper](https://arxiv.org/pdf/1602.02215.pdf)
+  - Google, [source code](https://github.com/src-d/tensorflow-swivel/blob/master/swivel.py)
 - [x] **FastText**; *Enriching Word Vectors with Subword Information* (17.06.16, arxiv) [paper](https://arxiv.org/pdf/1607.04606.pdf)
 - [x] **FastText-completed**; *Advances in Pre-Training Distributed Word Representations* (17.12.26, arxiv) [paper](https://arxiv.org/pdf/1712.09405.pdf)
 - [x] **FastText for classification**; *Bag of Tricks for Efficient Text Classification* (ACL 2017) [link](https://www.aclweb.org/anthology/E17-2068/)
@@ -23,15 +32,15 @@
 ### Natural Langauge Understanding
 
 ## :sparkles: Attention Mechanism
-- [x] **Multi-Head Attention**; *Attention Is All You Needs* (NIPS 2017) [link](https://papers.nips.cc/paper/7181-attention-is-all-you-need.pdf)
+- [x] **Multi-Head Attention**; *Attention Is All You Needs* (NIPS 2017) [paper](https://papers.nips.cc/paper/7181-attention-is-all-you-need.pdf)
 
 ## :art: Generative Model
 
 ### GAN
-- [ ] **Original GAN**; *Generative Adversarial Net* (NIPS 2014) [link](https://papers.nips.cc/paper/5423-generative-adversarial-nets.pdf)
+- [ ] **Original GAN**; *Generative Adversarial Net* (NIPS 2014) [paper](https://papers.nips.cc/paper/5423-generative-adversarial-nets.pdf)
 
 ## :brain: Reinforcement Learning
-- [x] **Policy Gradient Theorem** *Policy Gradient Methods for Reinforcement Learning with Function Approximation* (NIPS 2000) [link](https://papers.nips.cc/paper/1713-policy-gradient-methods-for-reinforcement-learning-with-function-approximation.pdf)
+- [x] **Policy Gradient Theorem** *Policy Gradient Methods for Reinforcement Learning with Function Approximation* (NIPS 2000) [paper](https://papers.nips.cc/paper/1713-policy-gradient-methods-for-reinforcement-learning-with-function-approximation.pdf)
 
 ### :information_source: DeepMind
 **```project: ShallowMinded```**
@@ -138,3 +147,4 @@
 - [ ] *Bidirectional LSTM networks for improved phoneme classification and recognition* (International Conference on Artificial Neural Networks 05.09.11) 
 - [ ] *Sequential neural text compression* (IEEE 1996) [paper](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.106.3159&rep=rep1&type=pdf)
 - [ ] *Neural expectation maximazation* (NIPS 2017) [paper](https://papers.nips.cc/paper/7246-neural-expectation-maximization.pdf)
+- [ ] *World Models* (18.05.09, arxiv) [paper](https://arxiv.org/pdf/1803.10122.pdf)
