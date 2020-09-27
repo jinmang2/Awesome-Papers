@@ -1,8 +1,12 @@
 # Awesome Papers
 
 ## NLP
+
+### Word Vector Representation
 Distributed Representations of Words and Phrases
 and their Compositionality
+
+### Natural Langauge Understanding
 
 ## Generative Model
 
