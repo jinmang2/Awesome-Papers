@@ -234,6 +234,16 @@ How Does Batch Normalization Help Optimization?
 
 Layer Normalization https://arxiv.org/abs/1607.06450
 
+LeCun Initialization [Efficient BackProp](http://yann.lecun.com/exdb/publis/pdf/lecun-98b.pdf)
+
+Xavier initialization [Understanding the difficulty of training deep feedforward neural networks](http://proceedings.mlr.press/v9/glorot10a/glorot10a.pdf)
+
+He Initialization [Delving Deep into Rectifiers: Surpassing Human-Level Performance on ImageNet Classification](https://arxiv.org/pdf/1502.01852.pdf)
+
+Nesterov Optimizer (Optimization류 논문들)
+
+weight_standardization
+
 ## :heart_eyes: Schmidhuber
 >[**Juergen Schmidhuber's Google Scholar**](https://scholar.google.co.kr/citations?user=gLnCTgIAAAAJ&hl=ko)
 - [x] *Long short-term memory* (Neural Computation 1997) [paper](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.676.4320&rep=rep1&type=pdf)
@@ -247,3 +257,23 @@ Layer Normalization https://arxiv.org/abs/1607.06450
 - [ ] *Neural expectation maximazation* (NIPS 2017) [paper](https://papers.nips.cc/paper/7246-neural-expectation-maximization.pdf)
 - [ ] *Accelerated Neural Evolution through Cooperatively Coevolved Synapses* (JMLR 2008) [paper](https://www.jmlr.org/papers/volume9/gomez08a/gomez08a.pdf)
 - [ ] *World Models* (18.05.09, arxiv) [paper](https://arxiv.org/pdf/1803.10122.pdf)
+
+## ETC
+
+LSTM-SAE Unsupervised Pre-training of a Deep LSTM-based Stacked Autoencoder for Multivariate Time Series Forecasting Problems
+
+C3D Learning Spatiotemporal Features with 3D Convolutional Networks
+
+n-gram 관련 논문
+- Estimation of Probabilities from Sparse Data for the
+Language Model Component of a Speech Recognizer
+- Interpolated estimation of Markov source parameters from sparse data
+
+Pointing the Unknown Words (몬트리홀 대학)
+
+Seq2Seq Learning Phrase Representations using RNN Encoder-Decoder for Statistical Machine Translation
+
+Real-World Anomaly Detection in Surveillance Videos
+
+self-attention on classification - A Structured Self-Attentive Sentence Embedding
+
