@@ -1,4 +1,4 @@
-1# Awesome-Papers
+# Awesome-Papers
 :bulb: To be AI Researcher
 
 ## :office: NLP
