@@ -3,11 +3,11 @@
 
 ## :office: NLP
 
->### *Word Vector Representation*
+### *Word Vector Representation*
 Distributed Representations of Words and Phrases
 and their Compositionality
 
->### **Natural Langauge Understanding**
+>### *Natural Langauge Understanding*
 
 ## :art: Generative Model
 
