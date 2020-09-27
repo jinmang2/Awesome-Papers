@@ -3,10 +3,10 @@
 
 ## :office: NLP
 
-### *Word Vector Representation*
-- [x] Distributed Representations of Words and Phrases and their Compositionality
+### Word Vector Representation
+- [x] *Distributed Representations of Words and Phrases and their Compositionality*
 
-### *Natural Langauge Understanding*
+### Natural Langauge Understanding
 
 ## :art: Generative Model
 
@@ -14,21 +14,20 @@
 
 ## :brain: Reinforcement Learning
 
-## :information_source: DeepMind
-
-### *Blog Posting* (project: ShallowMinded)
+### :information_source: DeepMind
+project: ShallowMinded
 
 - [x] 20.09.15; Deep Reinforcement Learning (16.06.17) [post](https://deepmind.com/blog/article/deep-reinforcement-learning)
-  - [ ] **DQN**; Playing Atari with Deep Reinforcement Learning (13.12.19, arxiv) [paper](https://arxiv.org/pdf/1312.5602.pdf)
-  - [ ] **DQN**; Human-level control through deep reinforcement learning (15.02.26, Nature) [paper](https://storage.googleapis.com/deepmind-data/assets/papers/DeepMindNature14236Paper.pdf)
+  - [ ] **DQN**; *Playing Atari with Deep Reinforcement Learning* (13.12.19, arxiv) [paper](https://arxiv.org/pdf/1312.5602.pdf)
+  - [ ] **DQN**; *Human-level control through deep reinforcement learning* (15.02.26, Nature) [paper](https://storage.googleapis.com/deepmind-data/assets/papers/DeepMindNature14236Paper.pdf)
   - Improved the DQN methods as follows;
     - **Learning Dynamics**;
-      - [ ] Deep Reinforcement Learning with Double Q-learning (15.12.08, arxiv) [paper](https://arxiv.org/pdf/1509.06461.pdf)
-      - [ ] Increasing the Action Gap: New Operators for Reinforcement Learning (15.12.05, arxiv) [paper](https://arxiv.org/pdf/1512.04860.pdf)
-    - [ ] **Replayed Experiences**; PRIORITIZED EXPERIENCE REPLAY (16.02.25, arxiv) [paper](https://arxiv.org/pdf/1511.05952.pdf)
-    - [ ] **Normalising**; Dueling Network Architectures for Deep Reinforcement Learning (16.04.05) [paper](https://arxiv.org/pdf/1511.06581.pdf)
-    - [ ] **Aggregating**; Deep Exploration via Bootstrapped DQN (16.07.04, arxiv) [paper](https://arxiv.org/pdf/1602.04621.pdf)
-    - [ ] **Re-scaling**; Learning values across many orders of magnitude (16.08.16, arxiv) [paper](https://arxiv.org/pdf/1602.07714.pdf)
+      - [ ] *Deep Reinforcement Learning with Double Q-learning* (15.12.08, arxiv) [paper](https://arxiv.org/pdf/1509.06461.pdf)
+      - [ ] *Increasing the Action Gap: New Operators for Reinforcement Learning* (15.12.05, arxiv) [paper](https://arxiv.org/pdf/1512.04860.pdf)
+    - [ ] **Replayed Experiences**; *PRIORITIZED EXPERIENCE REPLAY* (16.02.25, arxiv) [paper](https://arxiv.org/pdf/1511.05952.pdf)
+    - [ ] **Normalising**; *Dueling Network Architectures for Deep Reinforcement Learning* (16.04.05, arxiv) [paper](https://arxiv.org/pdf/1511.06581.pdf)
+    - [ ] **Aggregating**; *Deep Exploration via Bootstrapped DQN* (16.07.04, arxiv) [paper](https://arxiv.org/pdf/1602.04621.pdf)
+    - [ ] **Re-scaling**; *Learning values across many orders of magnitude* (16.08.16, arxiv) [paper](https://arxiv.org/pdf/1602.07714.pdf)
   
 - [x] 20.09.16;	Announcing DeepMind Health research partnership with Moorfields Eye Hospital (16.07.05) [post](https://deepmind.com/blog/announcements/announcing-deepmind-health-research-partnership-moorfields-eye-hospital)
 
