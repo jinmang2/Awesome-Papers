@@ -3,11 +3,11 @@
 
 ## :office: NLP
 
-### Word Vector Representation
+>### Word Vector Representation
 Distributed Representations of Words and Phrases
 and their Compositionality
 
-### Natural Langauge Understanding
+>### Natural Langauge Understanding
 
 ## :art: Generative Model
 
@@ -16,6 +16,9 @@ and their Compositionality
 ## :brain: Reinforcement Learning
 
 ## :information_source: DeepMind
+
+>### Blog Posting
+- 200915 Deep Reinforcement Learning
 
 ## :chart_with_upwards_trend: Financial Mathematics & Engineer
 
