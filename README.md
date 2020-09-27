@@ -8,6 +8,12 @@
   - [In Wikipedia](https://en.wikipedia.org/wiki/Byte_pair_encoding#cite_note-4)
 - [x] **Adjust BPE on NMT**; *Neural Machine Translation of Rare Words with Subword Units* (ACL 2016) [paper](https://www.aclweb.org/anthology/P16-1162.pdf)
   - Compare between `n-gram` and `byte-pair-encoding`
+  
+Wordpiece
+
+SentencePiece
+
+Morphological
 
 ### Word Vector Representation
 - [x] **NPLM**; *A Neural Probabilistic Language Model* (jmlr 2003) [paper](https://jmlr.org/papers/volume3/tmp/bengio03a.pdf)
@@ -35,54 +41,68 @@
 
 ### NLP Tasks
 
+A large annotated corpus for learning natural language inference, Bowman et al., 2015 (EMNLP)
+
+A board-coverage challenge corpus for sentence understanding through inference, Williams et al., 2018
+
+SQuad: 100,000+ questions for machine comprehension of text, Rajpurkar et al., 2016
+
+introduction to th conll-2003 shared task: language-independent named entity recognition, Tjong Kim Sang and De Meulder, 2003
+
 #### Text Classification
 - [x] **FastText for classification**; *Bag of Tricks for Efficient Text Classification* (ACL 2017) [link](https://www.aclweb.org/anthology/E17-2068/)
 - [ ] **UNMFit**; *Universal Language Model Fine-tuning for Text Classification* (18.05.23, arxiv) [paper](https://arxiv.org/pdf/1801.06146.pdf)
 
+#### Question Answering
+Stochastic Answer Networks for Machine Reading Comprehension https://arxiv.org/abs/1712.03556
+
+#### Textual Entailment
+Enhanced LSTM for Natural Language Inference https://arxiv.org/abs/1609.06038
+
+#### Semantic Role Labeling
+Deep Semantic Role Labeling: What Works and What’s Next https://www.aclweb.org/anthology/P17-1044/
+
 ### Pre-trained NLP Architecture
+
+
 - [ ] *Semi-supervised sequence learning* (NIPS 2015) [paper](https://papers.nips.cc/paper/5949-semi-supervised-sequence-learning.pdf)
 
-#### AllenAI
-- [x] **ELMo(Embeddings Language Model)**; *Deep contextualized word representations* (ACL 2018) [paper](https://arxiv.org/pdf/1802.05365.pdf)
-  - [Introduction](https://allennlp.org/elmo)
+Word Representations: A Simple and General Method for Semi-Supervised Learning
 
-#### GoogleAI
-- [x] **BERT(Bidirectional Encoder Represenations from Transformer)**; (ACL 2018) [paper](https://www.aclweb.org/anthology/N19-1423.pdf)
-- [ ] **ALBERT**; *ALBERT: A LITE BERT FOR SELF-SUPERVISED LEARNING OF LANGUAGE REPRESENTATIONS* (19.09.26, arxiv; ICLR 2020) [paper](https://arxiv.org/pdf/1909.11942.pdf)
-- [ ] **ELECTRA**; *ELECTRA: PRE-TRAINING TEXT ENCODERS AS DISCRIMINATORS RATHER THAN GENERATORS* (ICLR 2020) [paper](https://openreview.net/pdf?id=r1xMH1BtvB)
-
-#### OpenAI
-- [ ] **GPT-1**; *Improving language understanding with unsupervised learning* (Technical report, OpenAI 2018) [paper](https://s3-us-west-2.amazonaws.com/openai-assets/research-covers/language-unsupervised/language_understanding_paper.pdf)
-- [ ] **GPT-2**; *Language Models are Unsupervised Multitask Learners* (Technical report, OpenAI 2019) [paper](https://cdn.openai.com/better-language-models/language_models_are_unsupervised_multitask_learners.pdf)
-- [ ] **GPT-3**; *Language Models are Few-Shot Learners* () [paper](https://arxiv.org/pdf/2005.14165.pdf)
-
-#### Hugging Face
-- [ ] **DistilBERT**; *DistilBERT, a distilled version of BERT: smaller, faster, cheaper and lighter* (19.10.02, arxiv) [paper](https://arxiv.org/pdf/1910.01108.pdf)
-
-#### MicroSoft
-- [ ] **MT-DNN**; *Multi-Task Deep Neural Networks for Natural Language Understanding* (19.05.30, arxiv) [paper](https://arxiv.org/pdf/1901.11504.pdf)
-
-#### NVIDIA
-- [ ] **MegatronLM**; *Megatron-LM: Training Multi-Billion Parameter Language Models Using
-Model Parallelism* (19.09.17, arxiv) [paper](https://arxiv.org/pdf/1909.08053.pdf)
-
-#### Univ. of Washington
-- [ ] **Grover-Mega**; *Defending Against Neural Fake News* (19.10.29, arxiv) [paper](https://arxiv.org/pdf/1905.12616.pdf)
-
-#### Carnegie Mellon University (with Google Brain)
-- [ ] **Transformer-XL**; *Transformer-XL: Attentive Language Models Beyond a Fixed-Length Context* (19.06.02, arxiv) [paper](https://arxiv.org/pdf/1901.02860.pdf)
-- [ ] **XLNet**; *XLNet: Generalized Autoregressive Pretraining for Language Understanding* (v1:19.06.19 , v2:20.01.02, arxiv) [paper](https://arxiv.org/pdf/1906.08237.pdf)
-  - 19년도 6월에 발표한걸로 기억
-  
-#### Salesforce Research
-- [ ] **CTRL**; *CTRL: A CONDITIONAL TRANSFORMER LANGUAGE MODEL FOR CONTROLLABLE GENERATION* (19.09.11, arxiv) [paper](https://arxiv.org/pdf/1909.05858.pdf)
-
-#### FAIR
-- [x] **FastText-completed**; *Advances in Pre-Training Distributed Word Representations* (17.12.26, arxiv) [paper](https://arxiv.org/pdf/1712.09405.pdf)
-- [ ] **XLM**; *Cross-lingual Language Model Pretraining* (19.01.22, arxiv) [paper](https://arxiv.org/pdf/1901.07291.pdf)
-- [ ] **RoBERTa**; *RoBERTa: A Robustly Optimized BERT Pretraining Approach* (19.07.26, arxiv) [paper](https://arxiv.org/pdf/1907.11692.pdf)
-- [ ] **BART**; *BART: Denoising Sequence-to-Sequence Pre-training for Natural Language Generation, Translation, and Comprehension* (19.10.29, arxiv) [paper](https://arxiv.org/pdf/1910.13461.pdf)
-- [ ] **CamemBERT**; *CamemBERT: a Tasty French Language Model* (19.11.10, arxiv) [paper](https://arxiv.org/pdf/1911.03894.pdf)
+| institute                   | subtitle                 | title                                                                                                               | journal | published | etc                                                                                                                              |
+|-----------------------------|--------------------------|---------------------------------------------------------------------------------------------------------------------|---------|-----------|----------------------------------------------------------------------------------------------------------------------------------|
+| AllenAI                     | ELMo                     | *Deep contextualized word representations*                                                                          | ACL     | 2018      | [paper](https://arxiv.org/pdf/1802.05365.pdf)                                                                                    |
+| AllenAI                     | LongFormer               | *Longformer: The Long-Document Transformer*                                                                         | arxiv   | 20.04.10  | [paper](https://arxiv.org/pdf/2004.05150.pdf)                                                                                    |
+| GoogleAI                    | BERT                     | *BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding*                                  | ACL     | 2018      | [paper](https://www.aclweb.org/anthology/N19-1423.pdf)                                                                           |
+| GoogleAI                    | ALBERT                   | *ALBERT: A LITE BERT FOR SELF-SUPERVISED LEARNING OF LANGUAGE REPRESENTATIONS*                                      | ICLR    | 19.09.26  | [paper](https://arxiv.org/pdf/1909.11942.pdf)                                                                                    |
+| GoogleAI                    | T5                       | *Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer*                                 | JMLR    | 19.10.23  | [paper](https://arxiv.org/pdf/1910.10683.pdf)                                                                                    |
+| GoogleAI                    | PEGASUS                  | *PEGASUS: Pre-training with Extracted Gap-sentences for Abstractive Summarization*                                  | ICML    | 2020      | [paper](https://arxiv.org/pdf/1912.08777.pdf)                                                                                    |
+| GoogleAI                    | ELECTRA                  | *ELECTRA: PRE-TRAINING TEXT ENCODERS AS DISCRIMINATORS RATHER THAN GENERATORS*                                      | ICLR    | 2020      | [paper](https://openreview.net/pdf?id=r1xMH1BtvB)                                                                                |
+| DeepMind                    | Compressive Transformers | *COMPRESSIVE TRANSFORMERS FOR LONG-RANGE SEQUENCE MODELLING*                                                        | arxiv   | 19.11.13  | [paper](https://arxiv.org/pdf/1911.05507.pdf)                                                                                    |
+| UNC Chapel Hill             | LXMERT                   | *LXMERT: Learning Cross-Modality Encoder Representations from Transformers*                                         | arxiv   | 19.08.20  | [paper](https://arxiv.org/pdf/1908.07490.pdf)                                                                                    |
+| OpenAI                      | GPT-1                    | *Improving language understanding with unsupervised learning*                                                       | OpenAI  | 2018      | [paper](https://s3-us-west-2.amazonaws.com/openai-assets/research-covers/language-unsupervised/language_understanding_paper.pdf) |
+| OpenAI                      | GPT-2                    | *Language Models are Unsupervised Multitask Learners*                                                               | OpenAI  | 2019      | [paper](https://cdn.openai.com/better-language-models/language_models_are_unsupervised_multitask_learners.pdf)                   |
+| OpenAI                      | GPT-3                    | *Language Models are Few-Shot Learners*                                                                             | OpenAI  | 2020      | [paper](https://arxiv.org/pdf/2005.14165.pdf)                                                                                    |
+| FAIR                        | FastText                 | *Advances in Pre-Training Distributed Word Representations*                                                         | arxiv   | 17.12.26  | [paper](https://arxiv.org/pdf/1712.09405.pdf)                                                                                    |
+| FAIR                        | XLM                      | *Cross-lingual Language Model Pretraining*                                                                          | arxiv   | 19.01.22  | [paper](https://arxiv.org/pdf/1901.07291.pdf)                                                                                    |
+| FAIR                        | FSMT                     | *Facebook FAIR's WMT19 News Translation Task Submission*                                                            | arxiv   | 19.07.15  | [paper](https://arxiv.org/pdf/1907.06616.pdf)                                                                                    |
+| FAIR                        | RoBERTa                  | *RoBERTa: A Robustly Optimized BERT Pretraining Approach*                                                           | arxiv   | 19.07.26  | [paper](https://arxiv.org/pdf/1907.11692.pdf)                                                                                    |
+| FAIR                        | MMBT                     | *Supervised Multimodal Bitransformers for Classifying Images and Text*                                              | arxiv   | 19.09.06  | [paper](https://arxiv.org/pdf/1909.02950.pdf)                                                                                    |
+| FAIR                        | BART                     | *BART: Denoising Sequence-to-Sequence Pre-training for Natural Language Generation, Translation, and Comprehension* | arxiv   | 19.10.29  | [paper](https://arxiv.org/pdf/1910.13461.pdf)                                                                                    |
+| FAIR                        | CamemBERT                | *CamemBERT: a Tasty French Language Model*                                                                          | arxiv   | 19.11.10  | [paper](https://arxiv.org/pdf/1911.03894.pdf)                                                                                    |
+| FAIR                        | mBART                    | *Multilingual Denoising Pre-training for Neural Machine Translation*                                                | arxiv   | 20.01.22  | [paper](https://arxiv.org/pdf/2001.08210.pdf)                                                                                    |
+| FAIR                        | RAG                      | *Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks*                                                  | arxiv   | 20.05.22  | [paper](https://arxiv.org/pdf/2005.11401.pdf)                                                                                    |
+| Hugging Face                | DistilBERT               | *DistilBERT, a distilled version of BERT: smaller, faster, cheaper and lighter*                                     | arxiv   | 19.10.02  | [paper](https://arxiv.org/pdf/1910.01108.pdf)                                                                                    |
+| Microsoft                   | Marian                   | *Marian: Cost-effective High-Quality Neural Machine Translation in C++*                                             | ACL     | 2018      | [paper](https://www.aclweb.org/anthology/W18-2716.pdf)                                                                           |
+| Microsoft                   | MT-DNN                   | *Multi-Task Deep Neural Networks for Natural Language Understanding*                                                | arxiv   | 19.05.30  | [paper](https://arxiv.org/pdf/1901.11504.pdf)                                                                                    |
+| Microsoft                   | LayoutLM                 | *LayoutLM: Pre-training of Text and Layout for Document Image Understanding*                                        | arxiv   | 19.12.31  | [paper](https://arxiv.org/pdf/1912.13318.pdf)                                                                                    |
+| NVIDIA                      | MegatronLM               | *Megatron-LM: Training Multi-Billion Parameter Language Models Using Model Parallelism*                             | arxiv   | 19.09.17  | [paper](https://arxiv.org/pdf/1909.08053.pdf)                                                                                    |
+| Univ. of Washington         | Grover-Mega              | *Defending Against Neural Fake News*                                                                                | arxiv   | 19.10.29  | [paper](https://arxiv.org/pdf/1905.12616.pdf)                                                                                    |
+| Carnegie Mellon GoogleBrain | Transformer-XL           | *Transformer-XL: Attentive Language Models Beyond a Fixed-Length Context*                                           | arxiv   | 19.06.02  | [paper](https://arxiv.org/pdf/1901.02860.pdf)                                                                                    |
+| Carnegie Mellon GoogleBrain | XLNet                    | *XLNet: Generalized Autoregressive Pretraining for Language Understanding*                                          | arxiv   | 19.06.19  | [paper](https://arxiv.org/pdf/1906.08237.pdf)                                                                                    |
+| Carnegie Mellon GoogleBrain | Funnel                   | *Funnel-Transformer: Filtering out Sequential Redundancy for Efficient Language Processing*                         | arxiv   | 20.06.05  | [paper](https://arxiv.org/pdf/2006.03236.pdf)                                                                                    |
+| Salesforce                  | CTRL                     | *CTRL: A CONDITIONAL TRANSFORMER LANGUAGE MODEL FOR CONTROLLABLE GENERATION*                                        | arxiv   | 19.09.11  | [paper](https://arxiv.org/pdf/1909.05858.pdf)                                                                                    |
+| Anonymous authors           | MobileBERT               | *MobileBERT: Task-Agnostic Compression of BERT by Progressive Knowledge Transfer*                                   | ICLR    | 2020      | [paper](https://openreview.net/pdf?id=SJxjVaNKwB)                                                                                |
 
 ## :sparkles: Attention Mechanism
 - [x] **Bahdanau Attention**; *NEURAL MACHINE TRANSLATION BY JOINTLY LEARNING TO ALIGN AND TRANSLATE* (ICLR 2015) [paper](https://arxiv.org/pdf/1409.0473.pdf)
@@ -211,6 +231,8 @@ Input Covariate Shift
 Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift
 
 How Does Batch Normalization Help Optimization?
+
+Layer Normalization https://arxiv.org/abs/1607.06450
 
 ## :heart_eyes: Schmidhuber
 >[**Juergen Schmidhuber's Google Scholar**](https://scholar.google.co.kr/citations?user=gLnCTgIAAAAJ&hl=ko)
