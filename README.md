@@ -1,10 +1,24 @@
-# Awesome-Papers
+1# Awesome-Papers
 :bulb: To be AI Researcher
 
 ## :office: NLP
 
 ### Word Vector Representation
+- [x] **NPLM**; *A Neural Probabilistic Language Model* (jmlr 2003) [paper](https://jmlr.org/papers/volume3/tmp/bengio03a.pdf)
+  - NPLM's Reference -> 문장에서 단어의 역할을 학습
+    - [ ] *Modeling High-Dimensional Discrete Data with Multi-Layer Neural Networks* (NIPS 2000) [paper](https://papers.nips.cc/paper/1679-modeling-high-dimensional-discrete-data-with-multi-layer-neural-networks.pdf)
+      - NN으로 고차원 이진 분산 표현을 실시하는 아이디어 제시
+    - [ ] *Extracting distributed representations of concepts and relations from positive and negative propositions* (IEEE 2000) [link](https://ieeexplore.ieee.org/document/857906)
+      - Hinton 교수의 연구가 성공적으로 적용된 사례
+    - [ ] *Natural Language Processing With Modular Pdp Networks and Distributed Lexicon* (Cognitive Science 1991 July) [link](https://onlinelibrary.wiley.com/doi/abs/10.1207/s15516709cog1503_2)
+      - Neural network를 LM에 적용시키려 한 사례
+  - NPLM's Reference -> word sequence distribution의 statistical model을 학습
+    - [ ] *Sequential neural text compression* (IEEE 1996) [link](https://pubmed.ncbi.nlm.nih.gov/18255564/)
+      - I Love Schmidhuber a lot :)
 - [x] *Distributed Representations of Words and Phrases and their Compositionality*
+- [x] **FastText**; *Enriching Word Vectors with Subword Information* (17.06.16, arxiv) [paper](https://arxiv.org/pdf/1607.04606.pdf)
+- [x] **FastText-completed**; *Advances in Pre-Training Distributed Word Representations* (17.12.26, arxiv) [paper](https://arxiv.org/pdf/1712.09405.pdf)
+- [x] **FastText for classification**; *Bag of Tricks for Efficient Text Classification* (ACL 2017) [link](https://www.aclweb.org/anthology/E17-2068/)
 
 ### Natural Langauge Understanding
 
@@ -115,3 +129,12 @@
 ## :cat2: Theoretical Deep Learning
 
 ## :heart_eyes: Schmidhuber
+>[**Juergen Schmidhuber's Google Scholar**](https://scholar.google.co.kr/citations?user=gLnCTgIAAAAJ&hl=ko)
+- [x] *Long short-term memory* (Neural Computation 1997) [paper](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.676.4320&rep=rep1&type=pdf)
+- [ ] *LSTM: A Search Space Odyssey* (IEEE TRANSACTIONS ON NEURAL NETWORKS AND LEARNING SYSTEMS 2017) [paper](https://arxiv.org/pdf/1503.04069.pdf?fbclid=IwAR377Jhphz_xGSSThcqGUlAx8OJc_gU6Zwq8dABHOdS4WNOPRXA5LcHOjUg)
+- [x] *Highway Networks* (15.05.03, arxiv) [paper](https://arxiv.org/pdf/1505.00387.pdf)
+  - Full Paper: *Training Very Deep Networks* [link](https://arxiv.org/abs/1507.06228)
+- [ ] *Gradient flow in recurrent nets: the difficulty of learning long-term dependencies* (IEEE 2001) [paper](https://ml.jku.at/publications/older/ch7.pdf) [paper](https://mediatum.ub.tum.de/doc/1290195/file.pdf)
+- [ ] *Bidirectional LSTM networks for improved phoneme classification and recognition* (International Conference on Artificial Neural Networks 05.09.11) 
+- [ ] *Sequential neural text compression* (IEEE 1996) [paper](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.106.3159&rep=rep1&type=pdf)
+- [ ] *Neural expectation maximazation* (NIPS 2017) [paper](https://papers.nips.cc/paper/7246-neural-expectation-maximization.pdf)
