@@ -20,7 +20,7 @@
 - [x] **Policy Gradient Theorem** *Policy Gradient Methods for Reinforcement Learning with Function Approximation* (NIPS 2000) [link](https://papers.nips.cc/paper/1713-policy-gradient-methods-for-reinforcement-learning-with-function-approximation.pdf)
 
 ### :information_source: DeepMind
-project: ShallowMinded
+**```project: ShallowMinded```**
 
 - [x] 20.09.15; Deep Reinforcement Learning (16.06.17) [post](https://deepmind.com/blog/article/deep-reinforcement-learning)
   - Deep Q-Network for atari
