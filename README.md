@@ -3,6 +3,12 @@
 
 ## :office: NLP
 
+### Tokenization
+- [x] **BPE(Byte-Pair-Encoding)**; *A New Algorithm for Data Compression* (C-user journal 1994) [paper](https://www.derczynski.com/papers/archive/BPE_Gage.pdf)
+  - [In Wikipedia](https://en.wikipedia.org/wiki/Byte_pair_encoding#cite_note-4)
+- [x] **Adjust BPE on NMT**; *Neural Machine Translation of Rare Words with Subword Units* (ACL 2016) [paper](https://www.aclweb.org/anthology/P16-1162.pdf)
+  - Compare between `n-gram` and `byte-pair-encoding`
+
 ### Word Vector Representation
 - [x] **NPLM**; *A Neural Probabilistic Language Model* (jmlr 2003) [paper](https://jmlr.org/papers/volume3/tmp/bengio03a.pdf)
   - NPLM's Reference -> 문장에서 단어의 역할을 학습
@@ -26,18 +32,77 @@
 - [ ] **Swivel(Submatrix-Wise Vector Embedding Learner)**; *Swivel: Improving Embeddings by Noticing What’s Missing* () [paper](https://arxiv.org/pdf/1602.02215.pdf)
   - Google, [source code](https://github.com/src-d/tensorflow-swivel/blob/master/swivel.py)
 - [x] **FastText**; *Enriching Word Vectors with Subword Information* (17.06.16, arxiv) [paper](https://arxiv.org/pdf/1607.04606.pdf)
-- [x] **FastText-completed**; *Advances in Pre-Training Distributed Word Representations* (17.12.26, arxiv) [paper](https://arxiv.org/pdf/1712.09405.pdf)
-- [x] **FastText for classification**; *Bag of Tricks for Efficient Text Classification* (ACL 2017) [link](https://www.aclweb.org/anthology/E17-2068/)
 
-### Natural Langauge Understanding
+### NLP Tasks
+
+#### Text Classification
+- [x] **FastText for classification**; *Bag of Tricks for Efficient Text Classification* (ACL 2017) [link](https://www.aclweb.org/anthology/E17-2068/)
+- [ ] **UNMFit**; *Universal Language Model Fine-tuning for Text Classification* (18.05.23, arxiv) [paper](https://arxiv.org/pdf/1801.06146.pdf)
+
+### Pre-trained NLP Architecture
+- [ ] *Semi-supervised sequence learning* (NIPS 2015) [paper](https://papers.nips.cc/paper/5949-semi-supervised-sequence-learning.pdf)
+
+#### AllenAI
+- [x] **ELMo(Embeddings Language Model)**; *Deep contextualized word representations* (ACL 2018) [paper](https://arxiv.org/pdf/1802.05365.pdf)
+  - [Introduction](https://allennlp.org/elmo)
+
+#### GoogleAI
+- [x] **BERT(Bidirectional Encoder Represenations from Transformer)**; (ACL 2018) [paper](https://www.aclweb.org/anthology/N19-1423.pdf)
+- [ ] **ALBERT**; *ALBERT: A LITE BERT FOR SELF-SUPERVISED LEARNING OF LANGUAGE REPRESENTATIONS* (19.09.26, arxiv; ICLR 2020) [paper](https://arxiv.org/pdf/1909.11942.pdf)
+- [ ] **ELECTRA**; *ELECTRA: PRE-TRAINING TEXT ENCODERS AS DISCRIMINATORS RATHER THAN GENERATORS* (ICLR 2020) [paper](https://openreview.net/pdf?id=r1xMH1BtvB)
+
+#### OpenAI
+- [ ] **GPT-1**; *Improving language understanding with unsupervised learning* (Technical report, OpenAI 2018) [paper](https://s3-us-west-2.amazonaws.com/openai-assets/research-covers/language-unsupervised/language_understanding_paper.pdf)
+- [ ] **GPT-2**; *Language Models are Unsupervised Multitask Learners* (Technical report, OpenAI 2019) [paper](https://cdn.openai.com/better-language-models/language_models_are_unsupervised_multitask_learners.pdf)
+- [ ] **GPT-3**; *Language Models are Few-Shot Learners* () [paper](https://arxiv.org/pdf/2005.14165.pdf)
+
+#### Hugging Face
+- [ ] **DistilBERT**; *DistilBERT, a distilled version of BERT: smaller, faster, cheaper and lighter* (19.10.02, arxiv) [paper](https://arxiv.org/pdf/1910.01108.pdf)
+
+#### MicroSoft
+- [ ] **MT-DNN**; *Multi-Task Deep Neural Networks for Natural Language Understanding* (19.05.30, arxiv) [paper](https://arxiv.org/pdf/1901.11504.pdf)
+
+#### NVIDIA
+- [ ] **MegatronLM**; *Megatron-LM: Training Multi-Billion Parameter Language Models Using
+Model Parallelism* (19.09.17, arxiv) [paper](https://arxiv.org/pdf/1909.08053.pdf)
+
+#### Univ. of Washington
+- [ ] **Grover-Mega**; *Defending Against Neural Fake News* (19.10.29, arxiv) [paper](https://arxiv.org/pdf/1905.12616.pdf)
+
+#### Carnegie Mellon University (with Google Brain)
+- [ ] **Transformer-XL**; *Transformer-XL: Attentive Language Models Beyond a Fixed-Length Context* (19.06.02, arxiv) [paper](https://arxiv.org/pdf/1901.02860.pdf)
+- [ ] **XLNet**; *XLNet: Generalized Autoregressive Pretraining for Language Understanding* (v1:19.06.19 , v2:20.01.02, arxiv) [paper](https://arxiv.org/pdf/1906.08237.pdf)
+  - 19년도 6월에 발표한걸로 기억
+  
+#### Salesforce Research
+- [ ] **CTRL**; *CTRL: A CONDITIONAL TRANSFORMER LANGUAGE MODEL FOR CONTROLLABLE GENERATION* (19.09.11, arxiv) [paper](https://arxiv.org/pdf/1909.05858.pdf)
+
+#### FAIR
+- [x] **FastText-completed**; *Advances in Pre-Training Distributed Word Representations* (17.12.26, arxiv) [paper](https://arxiv.org/pdf/1712.09405.pdf)
+- [ ] **XLM**; *Cross-lingual Language Model Pretraining* (19.01.22, arxiv) [paper](https://arxiv.org/pdf/1901.07291.pdf)
+- [ ] **RoBERTa**; *RoBERTa: A Robustly Optimized BERT Pretraining Approach* (19.07.26, arxiv) [paper](https://arxiv.org/pdf/1907.11692.pdf)
+- [ ] **BART**; *BART: Denoising Sequence-to-Sequence Pre-training for Natural Language Generation, Translation, and Comprehension* (19.10.29, arxiv) [paper](https://arxiv.org/pdf/1910.13461.pdf)
+- [ ] **CamemBERT**; *CamemBERT: a Tasty French Language Model* (19.11.10, arxiv) [paper](https://arxiv.org/pdf/1911.03894.pdf)
 
 ## :sparkles: Attention Mechanism
+- [x] **Bahdanau Attention**; *NEURAL MACHINE TRANSLATION BY JOINTLY LEARNING TO ALIGN AND TRANSLATE* (ICLR 2015) [paper](https://arxiv.org/pdf/1409.0473.pdf)
+
 - [x] **Multi-Head Attention**; *Attention Is All You Needs* (NIPS 2017) [paper](https://papers.nips.cc/paper/7181-attention-is-all-you-need.pdf)
+
+## :massage: Conversational AI
+
+### Open-Domain
+- Real-Time Open-Domain Question Answering with Dense-Sparse Phrase Index, ACL
+- Kelvin Guu의 REALM, ACL
+- [ ] **DPR**; *Dense Passage Retrieval for Open-Domain Question Answering* (20.04.10) [paper](https://arxiv.org/pdf/2004.04906.pdf)
+  - [Huffon님 소개자료](https://www.facebook.com/111809756917564/posts/276190540479484/) 
 
 ## :art: Generative Model
 
 ### GAN
 - [ ] **Original GAN**; *Generative Adversarial Net* (NIPS 2014) [paper](https://papers.nips.cc/paper/5423-generative-adversarial-nets.pdf)
+
+## :monkey_face: Meta Learning
 
 ## :brain: Reinforcement Learning
 - [x] **Policy Gradient Theorem** *Policy Gradient Methods for Reinforcement Learning with Function Approximation* (NIPS 2000) [paper](https://papers.nips.cc/paper/1713-policy-gradient-methods-for-reinforcement-learning-with-function-approximation.pdf)
@@ -133,9 +198,19 @@
 
 ## :chart_with_upwards_trend: Financial Mathematics & Engineer
 
-## :massage: Conversational AI
-
 ## :cat2: Theoretical Deep Learning
+
+Batch Normalization
+
+Lipschitz gradient
+
+Global Batch Normalization
+
+Input Covariate Shift
+
+Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift
+
+How Does Batch Normalization Help Optimization?
 
 ## :heart_eyes: Schmidhuber
 >[**Juergen Schmidhuber's Google Scholar**](https://scholar.google.co.kr/citations?user=gLnCTgIAAAAJ&hl=ko)
@@ -143,8 +218,10 @@
 - [ ] *LSTM: A Search Space Odyssey* (IEEE TRANSACTIONS ON NEURAL NETWORKS AND LEARNING SYSTEMS 2017) [paper](https://arxiv.org/pdf/1503.04069.pdf?fbclid=IwAR377Jhphz_xGSSThcqGUlAx8OJc_gU6Zwq8dABHOdS4WNOPRXA5LcHOjUg)
 - [x] *Highway Networks* (15.05.03, arxiv) [paper](https://arxiv.org/pdf/1505.00387.pdf)
   - Full Paper: *Training Very Deep Networks* [link](https://arxiv.org/abs/1507.06228)
+- [x] *Recurrent Highway Networks* (ICML 2017) [paper](http://proceedings.mlr.press/v70/zilly17a/zilly17a.pdf)
 - [ ] *Gradient flow in recurrent nets: the difficulty of learning long-term dependencies* (IEEE 2001) [paper](https://ml.jku.at/publications/older/ch7.pdf) [paper](https://mediatum.ub.tum.de/doc/1290195/file.pdf)
 - [ ] *Bidirectional LSTM networks for improved phoneme classification and recognition* (International Conference on Artificial Neural Networks 05.09.11) 
 - [ ] *Sequential neural text compression* (IEEE 1996) [paper](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.106.3159&rep=rep1&type=pdf)
 - [ ] *Neural expectation maximazation* (NIPS 2017) [paper](https://papers.nips.cc/paper/7246-neural-expectation-maximization.pdf)
+- [ ] *Accelerated Neural Evolution through Cooperatively Coevolved Synapses* (JMLR 2008) [paper](https://www.jmlr.org/papers/volume9/gomez08a/gomez08a.pdf)
 - [ ] *World Models* (18.05.09, arxiv) [paper](https://arxiv.org/pdf/1803.10122.pdf)
