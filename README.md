@@ -49,6 +49,9 @@ SQuad: 100,000+ questions for machine comprehension of text, Rajpurkar et al., 2
 
 introduction to th conll-2003 shared task: language-independent named entity recognition, Tjong Kim Sang and De Meulder, 2003
 
+#### Neural Machine Translation
+- [ ] **MRT(Minimum Risk Training)**; *Minimum Risk Training for Neural Machine Translation* (ACL 2016) [paper](https://www.aclweb.org/anthology/P16-1159.pdf)
+
 #### Text Classification
 - [x] **FastText for classification**; *Bag of Tricks for Efficient Text Classification* (ACL 2017) [link](https://www.aclweb.org/anthology/E17-2068/)
 - [ ] **UNMFit**; *Universal Language Model Fine-tuning for Text Classification* (18.05.23, arxiv) [paper](https://arxiv.org/pdf/1801.06146.pdf)
@@ -61,6 +64,11 @@ Enhanced LSTM for Natural Language Inference https://arxiv.org/abs/1609.06038
 
 #### Semantic Role Labeling
 Deep Semantic Role Labeling: What Works and What’s Next https://www.aclweb.org/anthology/P17-1044/
+
+#### Summarization
+>**Extractive**
+- [ ] **BertSum**; *Fine-tune BERT for Extractive Summarization* (19.03.25, arxiv) [paper](https://arxiv.org/pdf/1903.10318.pdf)
+- [ ] **BertSum-Full Paper**; *Text Summarization with Pretrained Encoders* (19.08.22, arxiv) [paper](https://arxiv.org/pdf/1908.08345.pdf)
 
 ### Pre-trained NLP Architecture
 
@@ -109,7 +117,15 @@ Word Representations: A Simple and General Method for Semi-Supervised Learning
 
 - [x] **Multi-Head Attention**; *Attention Is All You Needs* (NIPS 2017) [paper](https://papers.nips.cc/paper/7181-attention-is-all-you-need.pdf)
 
+- [ ] **Google Research-Synthesizer**; *SYNTHESIZER: Rethinking Self-Attention in Transformer Models* (20.05.02, arxiv) [paper](https://arxiv.org/pdf/2005.00743.pdf)
+
 ## :massage: Conversational AI
+
+### Memory-Based Research
+- `Sumit Chopra`, `Jason Weston`님 연구 추적
+- [x] *Memory Networks* (14.10.15, arxiv; ICLR 2015) [paper](https://arxiv.org/pdf/1410.3916.pdf)
+- [x] *End-To-End Memory Networks* (NIPS 2015) [paper](https://papers.nips.cc/paper/5846-end-to-end-memory-networks.pdf)
+- [ ] *Learning Through Dialogue Interactions By Asking Questions* (16.12.15, ICLR 2017) [paper](https://arxiv.org/pdf/1612.04936.pdf)
 
 ### Open-Domain
 - Real-Time Open-Domain Question Answering with Dense-Sparse Phrase Index, ACL
@@ -220,6 +236,8 @@ Word Representations: A Simple and General Method for Semi-Supervised Learning
 ## :chart_with_upwards_trend: Financial Mathematics & Engineer
 
 ## :cat2: Theoretical Deep Learning
+
+- [x] *Neural Network Ensembles, Cross Validation, and Active Learning* (NIPS 1995) [paper](https://papers.nips.cc/paper/1001-neural-network-ensembles-cross-validation-and-active-learning.pdf)
 
 Batch Normalization
 
