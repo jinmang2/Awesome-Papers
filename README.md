@@ -1,6 +1,11 @@
 # Awesome-Papers
 :bulb: To be AI Researcher
 
+## :question: Objective of `jinmang2/Awesome-Papers` Repo.
+```
+To be AI Researcher, Artist and Good Person...!!
+```
+
 ## :office: NLP
 
 ### Tokenization
