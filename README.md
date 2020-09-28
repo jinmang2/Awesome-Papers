@@ -141,7 +141,15 @@ Word Representations: A Simple and General Method for Semi-Supervised Learning
 ## :monkey_face: Meta Learning
 
 ## :brain: Reinforcement Learning
+
+### Theoretical
 - [x] **Policy Gradient Theorem** *Policy Gradient Methods for Reinforcement Learning with Function Approximation* (NIPS 2000) [paper](https://papers.nips.cc/paper/1713-policy-gradient-methods-for-reinforcement-learning-with-function-approximation.pdf)
+
+### RL.start() 오늘의 논문 series
+- [ ] *ACCELERATED METHODS FOR DEEP REINFORCEMENT LEARNING* () [paper](https://arxiv.org/pdf/1803.02811.pdf)
+- [ ] *Implementation Matters In Deep RL* () [paper](https://openreview.net/forum?id=r1etN1rtPB)
+- [ ] *CURL: Contrastive Unsupervised Representations for Reinforcement Learning* () [paper](https://arxiv.org/pdf/2004.04136)
+- [ ] *Dream to Control: Learning Behaviors by Latent Imagination* () [paper](https://arxiv.org/abs/1912.01603)
 
 ### :information_source: DeepMind
 **```project: ShallowMinded```**
