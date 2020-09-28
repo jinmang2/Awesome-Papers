@@ -214,7 +214,8 @@ Word Representations: A Simple and General Method for Semi-Supervised Learning
 
 - [ ] 20.09.26;	Reinforcement learning with unsupervised auxiliary tasks (16.11.17) [post](https://deepmind.com/blog/article/reinforcement-learning-unsupervised-auxiliary-tasks)
   - [ ] **UNREAL Agent**; *REINFORCEMENT LEARNING WITH UNSUPERVISED AUXILIARY TASKS* (16.11.16, arxiv) [paper](https://arxiv.org/pdf/1611.05397.pdf)
-  - with A3C
+
+- [ ] 20.09.28; Working with the NHS to build lifesaving technology (16.11.22) [post](https://deepmind.com/blog/announcements/working-nhs-build-lifesaving-technology)
 
 ## :chart_with_upwards_trend: Financial Mathematics & Engineer
 
