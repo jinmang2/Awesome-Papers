@@ -1,0 +1,3 @@
+[submodule "nlp-paper-reading"]
+	path = nlp-paper-reading
+	url = https://github.com/kakaobrain/nlp-paper-reading.git
