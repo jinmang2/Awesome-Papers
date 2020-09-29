@@ -145,6 +145,36 @@ Word Representations: A Simple and General Method for Semi-Supervised Learning
 
 ## :monkey_face: Meta Learning
 
+-[ ] **MAML**; *Model-Agnostic Meta-Learning for Fast Adaptation of Deep Networks* (ICML 2017) [paper](https://arxiv.org/pdf/1703.03400.pdf)
+
+### Curiosity Algorithms
+- https://ai.googleblog.com/2018/10/curiosity-and-procrastination-in.html
+- [ ] Meta-leraning curiosity algorithms
+- [ ] Rapid Learning or Feature Reuse? Towards Understanding the Effectiveness of MAML
+- [ ] Novelty search (Lehman & Stanley, 2008)
+- [ ] Buffers and Nearest Neighbors (Fu et al., 2017)
+- [ ] Generating goals (Srivastava et al., 2013; Kulkarni et al., 2016)
+- [ ] Learning progress (Oudeyer et al., 2007; Schmidhuber, 2008)
+- [ ] Generating diverse skills (Eysenbach et al., 2018)
+- [ ] Stochastic neural networks (Florensa et al., 2017; Fortunato et al., 2017)
+- [ ] Count-based exploration (Tang et al., 2017)
+- [ ] Object-based curiosity measures (Forestier & Oudeyer, 2016)
+- [ ] Bonus-based (Taiga et al., 2019)
+
+### Road to General Intelligence
+- AutoML Style Approach
+  - Neural Architecture Search (NAS)
+  - Hyperparameter optimization for deep networks
+  - Auto-sklearn, Learning loss funtions to replace cross-entropy for training a fixed architecture on MNIST and CIFAR
+- Meta-learning with genetic programming, evolutionary computing
+- Programming Automation
+  - Searching over mathematical operations within neural networks
+  - Neural networks that learn programs
+- Modular Meta-Learning / Hierarchical Meta-Learning, Reinforcement Learning
+- Inspired from Cognitive/Brain Science (Attention, Curiosity, Common Sense, etc)
+- Agent57 (DeepMind)
+
+
 ## :brain: Reinforcement Learning
 
 ### Theoretical
