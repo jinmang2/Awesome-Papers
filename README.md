@@ -145,7 +145,7 @@ Word Representations: A Simple and General Method for Semi-Supervised Learning
 
 ## :monkey_face: Meta Learning
 
--[ ] **MAML**; *Model-Agnostic Meta-Learning for Fast Adaptation of Deep Networks* (ICML 2017) [paper](https://arxiv.org/pdf/1703.03400.pdf)
+- [ ] **MAML**; *Model-Agnostic Meta-Learning for Fast Adaptation of Deep Networks* (ICML 2017) [paper](https://arxiv.org/pdf/1703.03400.pdf)
 
 ### Curiosity Algorithms
 - https://ai.googleblog.com/2018/10/curiosity-and-procrastination-in.html
