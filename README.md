@@ -262,22 +262,25 @@ Word Representations: A Simple and General Method for Semi-Supervised Learning
   - [ ] **Google's current best `parametric` TTS**; *Fast, Compact, and High Quality LSTM-RNN Based Statistical Parametric Speech Synthesizers for Mobile Devices* (ISCA 2016) [link](https://research.google/pubs/pub45379/)
   - [ ] **Google's current best `concatenative` TTS**; *Recent Advances in Google Real-time HMM-driven Unit Selection Synthesizer* (ISCA 2016) [link](https://research.google/pubs/pub45564/)
   - [Mean Opinion Score Measure](https://en.wikipedia.org/wiki/Mean_opinion_score)
-
 - [x] 20.09.22;	Putting patients at the heart of DeepMind Health (16.09.21) [post](https://deepmind.com/blog/announcements/putting-patients-heart-deepmind-health)
-
 - [x] 20.09.23;	Announcing the Partnership on AI to Benefit People & Society (16.09.28) [post](https://deepmind.com/blog/announcements/announcing-partnership-ai-benefit-people-society)
-
 - [x] 20.09.24;	Differentiable neural computers (16.10.12) [post](https://deepmind.com/blog/article/differentiable-neural-computers)
   - [ ] **DNC; Dynamic Neural Computer**; *Hybrid computing using a neural network with dynamic external memory* (nature 16.10.12) [link](https://www.nature.com/articles/nature20101) [paper](https://www.gwern.net/docs/rl/2016-graves.pdf)
   - [ ] **DNC; opinion piece**; *Deep neural reasoning* (Nature 16.10.12) [link](https://www.nature.com/articles/nature19477)
   - [ ] **NTM; Neural Turing Machine**; *Neural Turing Machines* (14.12.10) [paper](https://arxiv.org/pdf/1410.5401.pdf)
-  
 - [x] 20.09.25;	DeepMind and Blizzard to release StarCraft II as an AI research environment (16.11.04) [post](https://deepmind.com/blog/announcements/deepmind-and-blizzard-release-starcraft-ii-ai-research-environment)
-
 - [ ] 20.09.26;	Reinforcement learning with unsupervised auxiliary tasks (16.11.17) [post](https://deepmind.com/blog/article/reinforcement-learning-unsupervised-auxiliary-tasks)
   - [ ] **UNREAL Agent**; *REINFORCEMENT LEARNING WITH UNSUPERVISED AUXILIARY TASKS* (16.11.16, arxiv) [paper](https://arxiv.org/pdf/1611.05397.pdf)
-
 - [ ] 20.09.28; Working with the NHS to build lifesaving technology (16.11.22) [post](https://deepmind.com/blog/announcements/working-nhs-build-lifesaving-technology)
+- [ ] 20.09.29; DeepMind Papers @ NIPS (Part 1) (16.12.02) [post](https://deepmind.com/blog/article/deepmind-papers-nips-part-1)
+  - [ ] *Interaction Networks for Learning about Objects, Relations and Physics* (2016.12.01, arxiv; NIPS 2016) [paper](https://arxiv.org/pdf/1612.00222.pdf)
+  - For applications of interaction networks to scene understanding and imagination-based decision-making,
+    - [ ] *Discovering objects and their relations from entangled scene representations* (ICLR 2017) [paper](https://openreview.net/forum?id=rkrjrvmKl)
+    - [ ] *Metacontrol for Adaptive Imagination-Based Optimization* (ICLR 2017) [paper](https://openreview.net/forum?id=Bk8BvDqex)
+  - [ ] *Strategic Attentive Writer for Learning Macro-Actions* (; NIPS 2016)
+  
+  
+
 
 ## :chart_with_upwards_trend: Financial Mathematics & Engineer
 
