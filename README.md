@@ -2,6 +2,7 @@
 :bulb: To be AI Researcher
 - 내가 관심있는 연구분야의 SOTA 및 최신 연구 동향을 계속 조사하다 보면
 - 나만의 착안점, 개선할 점, contribution할 부분이 보일테니
+- !
 
 ## :question: Objective of `jinmang2/Awesome-Papers` Repo.
 ```
