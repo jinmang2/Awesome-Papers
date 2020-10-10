@@ -1,3 +1,6 @@
 [submodule "nlp-paper-reading"]
 	path = nlp-paper-reading
 	url = https://github.com/kakaobrain/nlp-paper-reading.git
+[submodule "AI-Article-Study-2nd"]
+	path = AI-Article-Study-2nd
+	url = https://github.com/jinmang2/AI-Article-Study-2nd.git
