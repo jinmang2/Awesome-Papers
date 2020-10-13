@@ -4,3 +4,6 @@
 [submodule "AI-Article-Study-2nd"]
 	path = AI-Article-Study-2nd
 	url = https://github.com/jinmang2/AI-Article-Study-2nd.git
+[submodule "Meta-Learning-Papers"]
+	path = Meta-Learning-Papers
+	url = https://github.com/floodsung/Meta-Learning-Papers.git
