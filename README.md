@@ -278,8 +278,14 @@ Word Representations: A Simple and General Method for Semi-Supervised Learning
     - [ ] *Discovering objects and their relations from entangled scene representations* (ICLR 2017) [paper](https://openreview.net/forum?id=rkrjrvmKl)
     - [ ] *Metacontrol for Adaptive Imagination-Based Optimization* (ICLR 2017) [paper](https://openreview.net/forum?id=Bk8BvDqex)
   - [ ] *Strategic Attentive Writer for Learning Macro-Actions* (; NIPS 2016)
+- [ ] 20.10.05; Open-sourcing DeepMind Lab (16.12.03) [post](https://deepmind.com/blog/article/open-sourcing-deepmind-lab)
+  - [ ] *DeepMind Lab* [paper](https://arxiv.org/abs/1612.03801) [code](https://github.com/deepmind/lab)
   
-  
+- [ ] 20.10.06; DeepMind Papers @ NIPS (Part 2) (16.12.05) [post](https://deepmind.com/blog/article/deepmind-papers-nips-part-2)
+- [ ] 20.10.07; DeepMind Papers @ NIPS (Part 3) (16.12.07) [post](https://deepmind.com/blog/article/deepmind-papers-nips-part-3)
+- [ ] 20.10.08; Bringing the best of mobile technology to Imperial College Healthcare NHS Trust (16.12.22) [post](https://deepmind.com/blog/announcements/imperial-college-healthcare-nhs-trust-partnership)
+- [ ] 20.10.12; DeepMind’s work in 2016: a round-up (17.01.03) [post](https://deepmind.com/blog/article/deepmind-round-up-2016)
+- [ ] 20.10.13; Our collaborations with academia to advance the field of AI (17.01.23) [post](https://deepmind.com/blog/article/our-collaborations-academia-advance-field-ai)
 
 
 ## :chart_with_upwards_trend: Financial Mathematics & Engineer
