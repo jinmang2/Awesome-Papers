@@ -57,6 +57,11 @@ SQuad: 100,000+ questions for machine comprehension of text, Rajpurkar et al., 2
 
 introduction to th conll-2003 shared task: language-independent named entity recognition, Tjong Kim Sang and De Meulder, 2003
 
+#### Dependency Parsing
+- [ ] *Incrementality in Deterministic Dependency Parsing* (ACL, 2003) [paper](https://www.aclweb.org/anthology/W04-0308.pdf)
+- [ ] *MaltParser: A Data-Driven Parser-Generator for Dependency Parsing* (LREC, 2005) [paper](http://www.lrec-conf.org/proceedings/lrec2006/pdf/162_pdf.pdf)
+- [ ] *A Fast and Accurate Dependency Parser using Neural Network* (EMNLP, 2014) [paper](https://www.emnlp2014.org/papers/pdf/EMNLP2014082.pdf)
+
 #### Neural Machine Translation
 - [ ] **MRT(Minimum Risk Training)**; *Minimum Risk Training for Neural Machine Translation* (ACL 2016) [paper](https://www.aclweb.org/anthology/P16-1159.pdf)
 
