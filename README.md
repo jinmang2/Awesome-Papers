@@ -295,6 +295,8 @@ Word Representations: A Simple and General Method for Semi-Supervised Learning
 
 ## :chart_with_upwards_trend: Financial Mathematics & Engineer
 
+## :art: Neuromorphic
+
 ## :cat2: Theoretical Deep Learning
 
 - [x] *Neural Network Ensembles, Cross Validation, and Active Learning* (NIPS 1995) [paper](https://papers.nips.cc/paper/1001-neural-network-ensembles-cross-validation-and-active-learning.pdf)
