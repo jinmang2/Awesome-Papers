@@ -29,3 +29,16 @@
 - testify: 증언하다
 - no matter what: ~할 지라도
 - roam: 배회하다
+
+### [20.11.11] DeepMind papers at ICML 2017 (part one) (17.08.04)
+
+[**Sharp Minima Can Generalize For Deep Nets**](https://arxiv.org/abs/1703.04933)
+- 실험적으로 Batch 방법론보다 SGD가 일반화를 더 잘하는 것처럼 보임
+  - 한가지 가설: SGD의 noise 가 sharpe한 minima보다 narrow(flat)한 minima를 더 잘 찾는다.
+- 위 가설에 대한 연구를 진행, Neural Network(특히 rectified)의 구조 때문에 Sharp한지 Flat한지 여부로 일반화 여부를 결정짓긴 어려움
+  - Sharp한지 Flat한지에 대한 정의는 Schmidhuber의 Flat Minima 논문 기타 등을 참조함
+- 즉, Batch size와 Generalization 사이에 인과관계는 없음
+
+### [20.11.10]
+
+### [20.11.17] The hippocampus as a predictive map (17.10.02)
