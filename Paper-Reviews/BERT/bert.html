@@ -1,0 +1,550 @@
+<!DOCTYPE html><html><head>
+      <title>bert</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:///C:\Users\jinma\.atom\packages\markdown-preview-enhanced\node_modules\@shd101wyy\mume\dependencies\katex\katex.min.css">
+      
+      
+
+      
+      
+      
+      
+      
+      
+      
+
+      <style>
+      /**
+ * prism.js Github theme based on GitHub's theme.
+ * @author Sam Clarke
+ */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #333;
+  background: none;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.4;
+
+  -moz-tab-size: 8;
+  -o-tab-size: 8;
+  tab-size: 8;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: .8em;
+  overflow: auto;
+  /* border: 1px solid #ddd; */
+  border-radius: 3px;
+  /* background: #fff; */
+  background: #f5f5f5;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal;
+  background: #f5f5f5;
+}
+
+.token.comment,
+.token.blockquote {
+  color: #969896;
+}
+
+.token.cdata {
+  color: #183691;
+}
+
+.token.doctype,
+.token.punctuation,
+.token.variable,
+.token.macro.property {
+  color: #333;
+}
+
+.token.operator,
+.token.important,
+.token.keyword,
+.token.rule,
+.token.builtin {
+  color: #a71d5d;
+}
+
+.token.string,
+.token.url,
+.token.regex,
+.token.attr-value {
+  color: #183691;
+}
+
+.token.property,
+.token.number,
+.token.boolean,
+.token.entity,
+.token.atrule,
+.token.constant,
+.token.symbol,
+.token.command,
+.token.code {
+  color: #0086b3;
+}
+
+.token.tag,
+.token.selector,
+.token.prolog {
+  color: #63a35c;
+}
+
+.token.function,
+.token.namespace,
+.token.pseudo-element,
+.token.class,
+.token.class-name,
+.token.pseudo-class,
+.token.id,
+.token.url-reference .token.variable,
+.token.attr-name {
+  color: #795da3;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.title,
+.token.title .token.punctuation {
+  font-weight: bold;
+  color: #1d3e81;
+}
+
+.token.list {
+  color: #ed6a43;
+}
+
+.token.inserted {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.token.deleted {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+
+/* JSON */
+.language-json .token.property {
+  color: #183691;
+}
+
+.language-markup .token.tag .token.punctuation {
+  color: #333;
+}
+
+/* CSS */
+code.language-css,
+.language-css .token.function {
+  color: #0086b3;
+}
+
+/* YAML */
+.language-yaml .token.atrule {
+  color: #63a35c;
+}
+
+code.language-yaml {
+  color: #183691;
+}
+
+/* Ruby */
+.language-ruby .token.function {
+  color: #333;
+}
+
+/* Markdown */
+.language-markdown .token.url {
+  color: #795da3;
+}
+
+/* Makefile */
+.language-makefile .token.symbol {
+  color: #795da3;
+}
+
+.language-makefile .token.variable {
+  color: #183691;
+}
+
+.language-makefile .token.builtin {
+  color: #0086b3;
+}
+
+/* Bash */
+.language-bash .token.keyword {
+  color: #0086b3;
+}
+
+/* highlight */
+pre[data-line] {
+  position: relative;
+  padding: 1em 0 1em 3em;
+}
+pre[data-line] .line-highlight-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  display: block;
+  width: 100%;
+}
+
+pre[data-line] .line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 1em;
+  background: hsla(24, 20%, 50%,.08);
+  background: linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
+}
+
+pre[data-line] .line-highlight:before, 
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-start);
+  position: absolute;
+  top: .4em;
+  left: .6em;
+  min-width: 1em;
+  padding: 0 .5em;
+  background-color: hsla(24, 20%, 50%,.4);
+  color: hsl(24, 20%, 95%);
+  font: bold 65%/1.5 sans-serif;
+  text-align: center;
+  vertical-align: .3em;
+  border-radius: 999px;
+  text-shadow: none;
+  box-shadow: 0 1px white;
+}
+
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-end);
+  top: auto;
+  bottom: .4em;
+}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{padding:0 1.6em;margin-top:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc li{margin-bottom:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{list-style-type:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  150px);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+
+      </style>
+    </head>
+    <body for="html-export">
+      <div class="mume markdown-preview  ">
+      <h1 class="mume-header" id="bert-%EB%85%BC%EB%AC%B8-%EB%A6%AC%EB%B7%B0">BERT &#xB17C;&#xBB38; &#xB9AC;&#xBDF0;</h1>
+
+<h2 class="mume-header" id="bert">BERT?</h2>
+
+<ul>
+<li>Bidirectional Encoder Represenations from Transformer</li>
+<li><code>AllenAI</code>&#xC758; <code>ELMo</code>, <code>OpenAI</code>&#xC758; <code>GPT</code>&#xC640; &#xB2E4;&#xB974;&#xAC8C; <code>BERT</code>&#xB294; <em><em>&quot;&#xC591; &#xBC29;&#xD5A5;&#xC758; &#xB9E5;&#xB77D;</em>&quot;</em> &#xC744; <strong>&quot;&#xB3D9;&#xC2DC;&#xC5D0;&quot;</strong> &#xD559;&#xC2B5;&#xD560; &#xC218; &#xC788;&#xB294; <strong>&quot;Deep Bidirectional Representations&quot;</strong> &#xC744; &#xC0AC;&#xC804; &#xD559;&#xC2B5;&#xD568;</li>
+<li>pre-trained BERT &#xBAA8;&#xB378;&#xC740; QA, language inference &#xB4F1;&#xC5D0;&#xC11C; task &#xD2B9;&#xD654;&#xB41C; &#xAD6C;&#xC870;&#xB85C; &#xC218;&#xC815;&#xD560; &#xD544;&#xC694;&#xC5C6;&#xC774; &#xAD11;&#xBC94;&#xC704;&#xD55C; nlp task&#xC5D0;&#xC11C; &#xACE0;&#xC791; output layer &#xD558;&#xB098;&#xB97C; &#xCD94;&#xAC00;&#xD558;&#xC5EC; fine-tuning&#xD55C; &#xAC83;&#xB9CC;&#xC73C;&#xB85C; SOTA&#xB97C; &#xB2EC;&#xC131;</li>
+</ul>
+<p><img src="https://lh3.googleusercontent.com/proxy/-HTcJqMiLfCveFm_8-ckc9jIKuYAUYCFezRCQp9kNJo1Rh3Y915kGQUsYWZ-OIvFLu6vlpp4wvbAAjNHZjWKO1uRjV8PK821wiN75K6HRnzhbMPdXUnXazgyx6hwhrc" alt="img"></p>
+<h2 class="mume-header" id="pre-training-lm%EC%9D%80-nlp-task%EC%97%90%EC%84%9C-%EB%A7%A4%EC%9A%B0-%EB%9B%B0%EC%96%B4%EB%82%AC%EC%9D%8C">Pre-training LM&#xC740; NLP task&#xC5D0;&#xC11C; &#xB9E4;&#xC6B0; &#xB6F0;&#xC5B4;&#xB0AC;&#xC74C;!</h2>
+
+<p>Language Model pre-training&#xC740; &#xC790;&#xC5F0;&#xC5B4; &#xCC98;&#xB9AC; task&#xC5D0;&#xC11C; &#xB9E4;&#xC6B0; &#xD6A8;&#xACFC;&#xC801;&#xC774;&#xC5C8;&#xC74C;</p>
+<ul>
+<li>[&#xC2DC;&#xCD08;:] Semi-supervised sequence learning, Dai and Le, 2015</li>
+<li>[ELMo:] Deep contextualized word representations, Peters et al., 2018a</li>
+<li>[GPT1:] Improving language understanding with unsupervised learning, Radford et al, 2018</li>
+<li>[Fine-tune based:] Universal language model fine-tuning for text classification, Howard and Ruder, 2018</li>
+</ul>
+<p>token-level task&#xC5D0;&#xC11C;&#xB3C4; &#xB6F0;&#xC5B4;&#xB0AC;&#xACE0;</p>
+<ul>
+<li>token-level task&#xB780;, model&#xC774; output&#xC744; token &#xB2E8;&#xC704;&#xB85C; fine-grained(&#xC798;&#xAC8C; &#xCABC;&#xAC1C;&#xC9C4;)&#xD558;&#xAC8C; &#xC0DD;&#xC0B0;&#xD560; &#xAC83;&#xC744; &#xC694;&#xAD6C;&#xB418;&#xB294; task</li>
+<li>named entity recognition&#xACFC; question answering &#xB4F1;&#xC774; &#xC874;&#xC7AC;</li>
+<li>introduction to th conll-2003 shared task: language-independent named entity recognition, Tjong Kim Sang and De Meulder, 2003</li>
+<li>SQuad: 100,000+ questions for machine comprehension of text, Rajpurkar et al., 2016</li>
+</ul>
+<p>sentence-level task&#xC5D0;&#xC11C;&#xB3C4; &#xC6B0;&#xC218;&#xD55C; &#xC131;&#xB2A5;&#xC744; &#xBCF4;&#xC784;</p>
+<ul>
+<li>natural language inference(NLI)
+<ul>
+<li>A large annotated corpus for learning natural language inference, Bowman et al., 2015 (EMNLP)</li>
+<li>A board-coverage challenge corpus for sentence understanding through inference, Williams et al., 2018</li>
+</ul>
+</li>
+<li>Paraphrasing
+<ul>
+<li>Automatically constructing a corpus of sentential paraphrases, Dolan and Brockett, 2005</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://mino-park7.github.io/images/2018/12/%EA%B7%B8%EB%A6%BC1-bert-openai-gpt-elmo-%EC%B6%9C%EC%B2%98-bert%EB%85%BC%EB%AC%B8.png" alt="img"></p>
+<h2 class="mume-header" id="%EA%B8%B0%EC%A1%B4-pre-training-%EB%AA%A8%EB%8D%B8-elmo-gpt%EC%9D%98-%EB%AC%B8%EC%A0%9C">&#xAE30;&#xC874; Pre-training &#xBAA8;&#xB378;, ELMo, GPT&#xC758; &#xBB38;&#xC81C;?</h2>
+
+<p>Pre-training&#xC744; &#xC801;&#xC6A9;&#xC2DC;&#xD0A4;&#xB294; &#xBC29;&#xBC95;&#xC740; &#xB450; &#xAC00;&#xC9C0;&#xAC00; &#xC874;&#xC7AC;!</p>
+<ul>
+<li><strong>feature-based approach</strong> : &#xD2B9;&#xC815; task&#xB97C; &#xC218;&#xD589;&#xD558;&#xB294; network&#xC5D0; pre-trained language representation&#xC744; &#xCD94;&#xAC00;&#xC801;&#xC778; feature&#xB85C; &#xC81C;&#xACF5;. &#xC989;, &#xB450; &#xAC1C;&#xC758; network&#xB97C; &#xBD99;&#xC5EC;&#xC11C; &#xC0AC;&#xC6A9;&#xD55C;&#xB2E4;&#xACE0; &#xBCF4;&#xBA74; &#xB429;&#xB2C8;&#xB2E4;. &#xB300;&#xD45C;&#xC801;&#xC778; &#xBAA8;&#xB378; : ELMo(Peters et al., 2018)</li>
+<li><strong>fine-tuning approach</strong> : task-specific&#xD55C; parameter&#xB97C; &#xCD5C;&#xB300;&#xD55C; &#xC904;&#xC774;&#xACE0;, pre-trained&#xB41C; parameter&#xB4E4;&#xC744; downstream task &#xD559;&#xC2B5;&#xC744; &#xD1B5;&#xD574; &#xC870;&#xAE08;&#xB9CC; &#xBC14;&#xAFD4;&#xC8FC;&#xB294;(fine-tuning) &#xBC29;&#xC2DD;. &#xB300;&#xD45C;&#xC801;&#xC778; &#xBAA8;&#xB378; : Generative Pre-trained Transformer(OpenAI GPT) (Radford et al., 2018)</li>
+</ul>
+<p>ELMo&#xB294; &#xC591;&#xBC29;&#xD5A5;&#xC744; independent&#xD558;&#xAC8C; &#xD559;&#xC2B5;&#xC744; &#xD558;&#xACE0;</p>
+<ul>
+<li>&#xC774;&#xB97C; Shallow Bidirectional&#xC774;&#xB77C; &#xBD80;&#xB984;</li>
+<li>&#xB2E8;&#xBC29;&#xD5A5; concat &#xB2E8;&#xBC29;&#xD5A5;</li>
+</ul>
+<p>GPT&#xB294; &#xB2E8;&#xBC29;&#xD5A5; Transformer Decoder(&#xC0DD;&#xC131;&#xBAA8;&#xB378;&#xC774;&#xAE30; &#xB54C;&#xBB38;)&#xC744; &#xC0AC;&#xC6A9;</p>
+<ul>
+<li>Unbidirectional</li>
+</ul>
+<p>ELMo&#xC640; GPT1&#xC758; objective function(pre-training&#xC2DC;)&#xB294; &#xB3D9;&#xC77C;!</p>
+<ul>
+<li>&#xC774;&#xC804; &#xD1A0;&#xD070;&#xC73C;&#xB85C; &#xB2E4;&#xC74C; &#xD1A0;&#xD070; &#xC608;&#xCE21;(&#xBC29;&#xD5A5;&#xB9CC; &#xB2E4;&#xB97C; &#xBFD0;)</li>
+<li>Language Model</li>
+</ul>
+<h2 class="mume-header" id="bert%EC%9D%98-pre-training-2-objective-mlm-nsp">BERT&#xC758; pre-training 2 objective: MLM, NSP</h2>
+
+<p>BERT&#xB294; &#xC704;&#xC5D0;&#xC11C; &#xC5B8;&#xAE09;&#xD55C; unidirectional &#xD55C; &#xC81C;&#xC57D;&#xC744; <code>masked language model(MLM)</code> pre-training objective&#xB97C; &#xC0AC;&#xC6A9;&#xD558;&#xC5EC; &#xBB38;&#xC81C;&#xB97C; &#xD574;&#xACB0;&#xD558;&#xACE0;&#xC790; &#xD568;!</p>
+<ul>
+<li>MLM pre-training objective&#xB294; Cloze task(Cloze procedure: A new tool for measuring readability, Taylor, 1953)&#xC5D0;&#xC11C; &#xC601;&#xAC10;&#xC744; &#xC5BB;&#xC5C8;&#xB2E4;&#xACE0; &#xD568;!</li>
+</ul>
+<p>masked langauge moddel&#xC740; input token&#xC758; &#xC77C;&#xBD80;&#xBD84;&#xC744; random&#xD558;&#xAC8C; masking!<br>
+&#xADF8;&#xB9AC;&#xACE0; objective&#xB294; masking&#xB41C; token id&#xB97C; &#xC624;&#xC9C1; &#xBB38;&#xB9E5;&#xC73C;&#xB85C; original vocab id&#xC744; &#xC608;&#xCE21;&#xD558;&#xB294; &#xAC83;&#xC774; &#xBAA9;&#xD45C;!</p>
+<p><code>left-to-right</code> LM pre-training, &#xADF8;&#xB7EC;&#xB2C8;&#xAE4C; GPT&#xB791; &#xB2E4;.&#xB974;.&#xAC8C;! MLM objective&#xB294; deep-bidirectional transformer&#xB97C; pre-training&#xD560; &#xC218; &#xC788;&#xAC8C; left&#xC640; right context&#xB97C; &#xC5F0;&#xACB0;&#xD574;&#xC8FC;&#xB294;(fuse) &#xD45C;&#xD604;&#xC744; &#xAC00;&#xB2A5;&#xCF00;&#xD574;&#xC90C;!</p>
+<ul>
+<li><code>left-to-right</code>&#xC640; <code>right-to-left</code>&#xB97C; &#xAC04;&#xACB0;&#xD558;&#xAC8C; &#xC4F4; &#xB9D0;!</li>
+</ul>
+<p>MLM&#xC5D0; &#xB354;&#xD558;&#xC5EC; <code>next sentence prediction</code> task&#xB97C; &#xC0AC;&#xC6A9;!</p>
+<ul>
+<li>text-pair &#xD45C;&#xD604;&#xC744; &#xB3D9;&#xC2DC;&#xC5D0; pre-training&#xD558;&#xB294; task</li>
+</ul>
+<h2 class="mume-header" id="%EB%B3%B8-%EB%85%BC%EB%AC%B8%EC%9D%98-contribution">&#xBCF8; &#xB17C;&#xBB38;&#xC758; contribution</h2>
+
+<ol>
+<li>Bidirectional Pre-training (fine-tuning based)</li>
+</ol>
+<ul>
+<li>GPT&#xC640; &#xB2E4;&#xB974;&#xAC8C; Language representation&#xC5D0; &#xC788;&#xC5B4; <code>bidirectional</code>&#xD55C; pre-training &#xBC29;&#xC2DD;&#xC758; &#xC911;&#xC694;&#xC131;&#xC744; &#xBD80;&#xAC01;&#xC2DC;&#xD0B4;</li>
+<li>ELMo&#xC640;&#xB3C4; &#xB2E4;&#xB984;! ELMo&#xB294; <code>left-to-right</code>&#xC640; <code>right-to-left</code> LM&#xC744; &#xAC01;&#xAC01; &#xB3C5;&#xB9BD;&#xC801;&#xC73C;&#xB85C; &#xD559;&#xC2B5;&#xD55C; &#xD6C4;&#xC5D0; shallow concat&#xC744; &#xC0AC;&#xC6A9;&#xD55C;&#xB2E4;&#xAD6C;!</li>
+</ul>
+<ol start="2">
+<li>NLP task&#xC5D0; specific&#xD558;&#xC9C0; &#xC54A;&#xACE0; universal&#xD558;&#xAC8C; &#xC801;&#xC6A9; &#xAC00;&#xB2A5;! SOTA&#xC2E0;&#xAE30;&#xB85D; &#xAE4C;&#xC9C0;!</li>
+</ol>
+<ul>
+<li>BERT&#xB294; sentence-level&#xACFC; token-level task&#xC5D0;&#xC11C; SOTA&#xB97C; &#xB2F9;&#xC131;</li>
+<li>&#xB9CE;&#xC740; task-specific&#xD55C; &#xAD6C;&#xC870;&#xC5D0;&#xC11C;&#xB3C4; &#xCD9C;&#xC911;!</li>
+<li>&#xC774;&#xB294; task-specific&#xD558;&#xAC8C; &#xAD6C;&#xC870;&#xB97C; &#xC644;&#xC804; &#xC218;&#xC815;&#xD558;&#xC9C0; &#xC54A;&#xACE0;&#xB3C4; &#xB2EC;&#xC131;!!(&#xB9DE;&#xB098;:?)</li>
+</ul>
+<ol start="3">
+<li>11&#xAC1C;&#xC758; NLP task&#xC5D0; &#xB300;&#xD574; SOTA&#xB97C; &#xAC1C;&#xC120;</li>
+</ol>
+<ul>
+<li>&#xCF54;&#xB4DC;&#xB294; <a href="https://github.com/google-research/bert">https://github.com/google-research/bert</a> &#xC5D0;&#xC11C; &#xD655;&#xC778; &#xAC00;&#xB2A5;</li>
+</ul>
+<h2 class="mume-header" id="model-architecture">Model Architecture</h2>
+
+<p>BERT&#xB294; Transformer&#xC758; Encoder &#xBD80;&#xBD84;&#xC744; &#xD65C;&#xC6A9;!</p>
+<ul>
+<li><a href="http://nlp.seas.harvard.edu/2018/04/03/attention.html">http://nlp.seas.harvard.edu/2018/04/03/attention.html</a></li>
+</ul>
+<p><strong>Notation</strong><br>
+&#xBCF8; &#xC5F0;&#xAD6C;&#xC5D0;&#xC11C; Layer(i.e., Transformer Block)&#xC758; &#xC218;&#xB97C; <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>L</mi></mrow><annotation encoding="application/x-tex">L</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault">L</span></span></span></span>&#xB85C;, hidden size&#xB97C; <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>H</mi></mrow><annotation encoding="application/x-tex">H</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.08125em;">H</span></span></span></span>, self-attention heads&#xC758; &#xC218;&#xB97C; <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault">A</span></span></span></span>&#xB85C; &#xD45C;&#xAE30;&#xD558;&#xB3C4;&#xB85D; &#xD55C;&#xB2E4;.</p>
+<ul>
+<li>&#xBAA8;&#xB4E0; &#xACBD;&#xC6B0;&#xC5D0;&#xC11C; feed-forward/filter size&#xB97C; 4H&#xB85C; &#xC124;&#xC815;&#xD588;&#xB2E4;.</li>
+<li>&#xC989;, <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>H</mi><mo>=</mo><mn>768</mn></mrow><annotation encoding="application/x-tex">H=768</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.08125em;">H</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">7</span><span class="mord">6</span><span class="mord">8</span></span></span></span>&#xC778; &#xACBD;&#xC6B0;&#xC5D4; <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>3072</mn></mrow><annotation encoding="application/x-tex">3072</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">3</span><span class="mord">0</span><span class="mord">7</span><span class="mord">2</span></span></span></span>, <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>H</mi><mo>=</mo><mn>1024</mn></mrow><annotation encoding="application/x-tex">H=1024</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.08125em;">H</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord">0</span><span class="mord">2</span><span class="mord">4</span></span></span></span>&#xC778; &#xACBD;&#xC6B0;&#xC5D4; <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>4096</mn></mrow><annotation encoding="application/x-tex">4096</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">4</span><span class="mord">0</span><span class="mord">9</span><span class="mord">6</span></span></span></span>&#xC774; &#xB41C;&#xB2E4;.</li>
+</ul>
+<p>&#xBCF8; &#xC5F0;&#xAD6C;&#xC5D0;&#xC11C; &#xB450; &#xBAA8;&#xB378;&#xC744; &#xC81C;&#xC2DC;&#xD55C;&#xB2E4;;</p>
+<ul>
+<li><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mtext>BERT</mtext><mtext>BASE</mtext></msub></mrow><annotation encoding="application/x-tex">\text{BERT}_{\text{BASE}}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord text"><span class="mord">BERT</span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord text mtight"><span class="mord mtight">BASE</span></span></span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> (L=12, H=768, A=12, Total Parameters=110M)</li>
+<li><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mtext>BERT</mtext><mtext>LARGE</mtext></msub></mrow><annotation encoding="application/x-tex">\text{BERT}_{\text{LARGE}}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord text"><span class="mord">BERT</span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord text mtight"><span class="mord mtight">LARGE</span></span></span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> (L=24, H=1024, A=16, Total Parameters=340M)</li>
+</ul>
+<p><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mtext>BERT</mtext><mtext>BASE</mtext></msub></mrow><annotation encoding="application/x-tex">\text{BERT}_{\text{BASE}}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord text"><span class="mord">BERT</span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord text mtight"><span class="mord mtight">BASE</span></span></span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>&#xB294; OpenAI GPT&#xC640;&#xC758; &#xBE44;&#xAD50;&#xB97C; &#xC704;&#xD574; &#xAC19;&#xC740; &#xBAA8;&#xB378; size&#xB97C; &#xAC00;&#xC9C0;&#xB3C4;&#xB85D; setting&#xD568;. &#xADF8;.&#xB7EC;.&#xB098;! BERT Transformer&#xB294; <code>bidirectional self-attention</code>&#xC744; &#xC0AC;&#xC6A9;&#xD558;&#xACE0; GPT Transformer&#xB294; &#xBAAF;&#xB290; token&#xC774; &#xC67C;&#xCABD;&#xC758; context&#xC5D0;&#xB9CC; &#xC9D1;&#xC911;&#xD560; &#xC218; &#xBC16;&#xC5D0; &#xC5C6;&#xB294; &#xC81C;&#xD55C;&#xB41C; self-attention&#xC744; &#xC0AC;&#xC6A9;&#xD55C;&#xB2E4;!!</p>
+<ul>
+<li>GPT: <code>Transformer decoder</code>, left-context-only version</li>
+<li>BERT&#xB294; <code>Transformer encoder</code>&#xB97C; &#xC0AC;&#xC6A9;, bidirectional&#xD558;&#xAC8C;!!</li>
+</ul>
+<h2 class="mume-header" id="bert-inputoutput">BERT Input/Output</h2>
+
+<p>&#xB450; &#xAC00;&#xC9C0; &#xACBD;&#xC6B0;&#xB85C; &#xB098;&#xB258;&#xC5B4;&#xC9D0;</p>
+<ul>
+<li>Single Sentence</li>
+<li>Pair of Sentences</li>
+</ul>
+<p>&#xB2E4;&#xC591;&#xD55C; down-stream task&#xB97C; &#xCC98;&#xB9AC;&#xD558;&#xAE30; &#xC704;&#xD574; &#xD55C; &#xAC1C;&#xC758; &#xBB38;&#xC7A5;&#xC774;&#xB4E0; &#xB450; &#xAC1C;&#xC758; &#xBB38;&#xC7A5;&#xC774;&#xB4E0; &#xD558;&#xB098;&#xC758; token sequence&#xB85C; &#xB098;&#xD0C0;&#xB0C4;.</p>
+<p>&#xB17C;&#xBB38;&#xC5D0;&#xC11C; &#xC18C;&#xAC1C;&#xD558;&#xB294; &#xBC29;&#xBC95; &#xBC0F; &#xADDC;&#xCE59;&#xC740; &#xC544;&#xB798;&#xC640; &#xAC19;&#xB2E4;.</p>
+<ul>
+<li>Wordpiece Embedding &#xC218;&#xD589;</li>
+<li>&#xCCAB; token&#xC740; &#xD56D;&#xC0C1; special classification token([CLS])
+<ul>
+<li>&#xC704; &#xD1A0;&#xD070;&#xC758; final hidden state&#xB294; &#xBD84;&#xB958; &#xBB38;&#xC81C;&#xC5D0;&#xC11C; sequence &#xD45C;&#xD604;&#xC744; aggregate&#xD558;&#xB294;&#xB370; &#xC0AC;&#xC6A9;</li>
+</ul>
+</li>
+<li>&#xBB38;&#xC7A5;&#xC758; &#xC30D;&#xC774; input&#xC73C;&#xB85C; &#xB4E4;&#xC5B4;&#xC628; &#xACBD;&#xC6B0;, special token([SEP])&#xC744; &#xBB38;&#xC7A5; &#xC0AC;&#xC774;&#xC5D0; &#xB123;&#xACE0; token&#xC774; &#xBB38;&#xC7A5; A&#xC5D0; &#xC788;&#xB294;&#xC9C0;, &#xBB38;&#xC7A5; B&#xC5D0; &#xC788;&#xB294;&#xC9C0; &#xD559;&#xC2B5;&#xD55C; embedding&#xC744; &#xCD94;&#xAC00;&#xD55C;&#xB2E4;(masking&#xC744; &#xB123;&#xB294;&#xB2E4;&#xACE0; &#xC774;&#xD574;&#xD574;&#xB77C;).</li>
+</ul>
+<p>input embedding&#xC744; <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>E</mi></mrow><annotation encoding="application/x-tex">E</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.05764em;">E</span></span></span></span>&#xB85C; &#xD45C;&#xAE30;, special [CLS] token&#xC758; final hidden vector&#xB97C; <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi><mo>&#x2208;</mo><msup><mi mathvariant="double-struck">R</mi><mi>H</mi></msup></mrow><annotation encoding="application/x-tex">C\in\mathbb{R}^H</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.72243em;vertical-align:-0.0391em;"></span><span class="mord mathdefault" style="margin-right:0.07153em;">C</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">&#x2208;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.8413309999999999em;vertical-align:0em;"></span><span class="mord"><span class="mord"><span class="mord mathbb">R</span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8413309999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight" style="margin-right:0.08125em;">H</span></span></span></span></span></span></span></span></span></span></span>&#xB85C;, <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>i</mi><mrow><mi>t</mi><mi>h</mi></mrow></msup></mrow><annotation encoding="application/x-tex">i^{th}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.849108em;vertical-align:0em;"></span><span class="mord"><span class="mord mathdefault">i</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.849108em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">t</span><span class="mord mathdefault mtight">h</span></span></span></span></span></span></span></span></span></span></span></span>&#xBC88;&#xC9F8; input token&#xC758; &#xCD5C;&#xC885; hidden vector&#xB97C; <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>T</mi><mi>i</mi></msub><mo>&#x2208;</mo><msup><mi mathvariant="double-struck">R</mi><mi>H</mi></msup></mrow><annotation encoding="application/x-tex">T_i\in\mathbb{R}^H</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.13889em;">T</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:-0.13889em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">i</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">&#x2208;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.8413309999999999em;vertical-align:0em;"></span><span class="mord"><span class="mord"><span class="mord mathbb">R</span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8413309999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight" style="margin-right:0.08125em;">H</span></span></span></span></span></span></span></span></span></span></span>&#xB85C; &#xD45C;&#xAE30;&#xD55C;&#xB2E4;.</p>
+<p>&#xC8FC;&#xC5B4;&#xC9C4; token&#xC5D0; &#xB300;&#xD574; input &#xD45C;&#xD604;&#xC740; token, segment, position embedding&#xC744; &#xB354;&#xD558;&#xC5EC; &#xAD6C;&#xC131;&#xB41C;&#xB2E4;.</p>
+<p><img src="https://user-images.githubusercontent.com/1250095/50039788-8e4e8a00-007b-11e9-9747-8e29fbbea0b3.png" alt="img"></p>
+<h2 class="mume-header" id="task-1-masked-lm">Task #1: Masked LM</h2>
+
+<h4 class="mume-header" id="%EC%99%9C-%EC%9D%B4%EC%A0%84-%EB%AA%A8%EB%8D%B8%EB%93%A4%EC%9D%80-%EC%96%91%EB%B0%A9%ED%96%A5%EC%9C%BC%EB%A1%9C-%ED%95%99%EC%8A%B5%ED%95%98%EC%A7%80-%EC%95%8A%EC%95%98%EC%9D%84%EA%B9%8C">&#xC65C; &#xC774;&#xC804; &#xBAA8;&#xB378;&#xB4E4;&#xC740; &#xC591;&#xBC29;&#xD5A5;&#xC73C;&#xB85C; &#xD559;&#xC2B5;&#xD558;&#xC9C0; &#xC54A;&#xC558;&#xC744;&#xAE4C;?</h4>
+
+<ul>
+<li>&#xC9C1;&#xAD00;&#xC801;&#xC73C;&#xB85C; &#xC591;&#xBC29;&#xD5A5;&#xC758; &#xB9E5;&#xB77D;&#xC744; &#xC774;&#xD574;&#xD558;&#xB294; &#xAC83;&#xC774; &#xB2E8;&#xC21C;&#xD558;&#xAC8C; &#xB2E8;&#xBC29;&#xD5A5;&#xC73C;&#xB85C; &#xD559;&#xC2B5;&#xD558;&#xB294; &#xAC83;&#xBCF4;&#xB2E4; &#xAC15;&#xB825;&#xD560; &#xAC83;</li>
+<li>&#xC65C; &#xADF8;&#xB807;&#xAC8C; &#xD558;&#xC9C0; &#xBABB;&#xD588;&#xC744;&#xAE4C;? &#xC591;&#xBC29;&#xD5A5;&#xC131;&#xC73C;&#xB85C; &#xBCF8;&#xB2E4;&#xB294; &#xAC83;&#xC740; &#xAC04;&#xC811;&#xC801;&#xC73C;&#xB85C; <strong>&quot;&#xC790;&#xC2E0;&#xC744; &#xBCF4;&#xB294; &#xAC83;&quot;</strong> &#xC744; &#xAC00;&#xB2A5;&#xCF00; &#xD55C;&#xB2E4;.</li>
+<li>&#xB54C;&#xBB38;&#xC5D0; &#xBAA8;&#xB378;&#xC774; cheating&#xD558;&#xB294; &#xAC83;&#xC774; &#xAC00;&#xB2A5;&#xD574;&#xC9C0;&#xAE30; &#xB54C;&#xBB38;&#xC5D0; &#xBD88;&#xAC00;&#xB2A5;&#xD588;&#xB358; &#xAC83;.</li>
+</ul>
+<h4 class="mume-header" id="masking%ED%95%B4%EC%84%9C-cheating%EC%9D%84-%EB%B0%A9%EC%A7%80%ED%95%98%EC%9E%90">Masking&#xD574;&#xC11C; cheating&#xC744; &#xBC29;&#xC9C0;&#xD558;&#xC790;.</h4>
+
+<ul>
+<li>deep bidirectional representation&#xC744; &#xD559;&#xC2B5;&#xD558;&#xAE30; &#xC704;&#xD574; &#xBCF8; &#xC5F0;&#xAD6C;&#xC5D0;&#xC120; input token&#xC744; &#xBB34;&#xC791;&#xC704;&#xB85C; &#xC77C;&#xBD80; <code>masking</code>&#xD558;&#xACE0; &#xADF8; <code>masking</code>&#xB41C; token&#xC744; &#xC608;&#xCE21;&#xD558;&#xB3C4;&#xB85D; &#xD588;&#xB2E4;.</li>
+<li><code>masked LM(MLM)</code>, 1953 Cloze procedure&#xC5D0;&#xC11C; &#xC601;&#xAC10;&#xC744; &#xBC1B;&#xC74C;</li>
+<li>&#xC774; &#xACBD;&#xC6B0;, mask token&#xC758; &#xCD5C;&#xC885; hidden vector&#xB294; &#xD45C;&#xC900; LM&#xACFC; &#xAC19;&#xC774; vocab&#xC744; &#xD1B5;&#xD574; output softmax&#xB85C; feeding</li>
+<li>&#xBCF8; &#xBAA8;&#xB4E0; &#xC2E4;&#xD5D8; &#xACFC;&#xC815;&#xC5D0;&#xC11C; &#xBB34;&#xC791;&#xC704;&#xB85C; &#xAC01; sequence&#xC758; <code>WordPiece token</code>&#xB4E4;&#xC758; 15%&#xB97C; masking&#xD588;&#xB2E4;.</li>
+<li><code>denoising auto-encoders</code>&#xC640;&#xB294; &#xB2E4;&#xB974;&#xAC8C; &#xC804;&#xCCB4; input&#xC744; &#xC7AC;&#xAD6C;&#xCD95;&#xD558;&#xB294; &#xAC83;&#xC774; &#xC544;&#xB2CC; masking&#xB41C; &#xB2E8;&#xC5B4;&#xB97C; &#xC608;&#xCE21;
+<ul>
+<li>Extracting and composing robust features with denoising autoencoders, Vincent et al., 2008
+<ul>
+<li>Bengio &#xAD50;&#xC218;!</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 class="mume-header" id="masking%EC%9D%84-%ED%99%95%EB%A5%A0%EC%A0%81%EC%9C%BC%EB%A1%9C-%EC%8B%A4%EC%8B%9C">Masking&#xC744; &#xD655;&#xB960;&#xC801;&#xC73C;&#xB85C; &#xC2E4;&#xC2DC;</h4>
+
+<ul>
+<li>&#xC774;&#xB85C; &#xC778;&#xD574; bidirectional&#xD558;&#xAC8C; &#xBAA8;&#xB378;&#xC744; pre-training&#xC2DC;&#xD0A4;&#xB294; &#xAC83;&#xC774; &#xAC00;&#xB2A5;&#xD574;&#xC9D0;</li>
+<li>&#xADF8;&#xB7EC;&#xB098; fine-tuning&#xC5D0;&#xC120; [MASK] token&#xC774; &#xB4F1;&#xC7A5;&#xD558;&#xC9C0; &#xC54A;&#xAE30; &#xB54C;&#xBB38;&#xC5D0; pre-training&#xACFC; fine-tuning &#xC0AC;&#xC774;&#xC5D0;&#xC11C; downside&#xC5D0; &#xBD88;&#xADE0;&#xD615;(mismatch)&#xC774; &#xC0DD;&#xAE40;</li>
+<li>&#xC774;&#xB97C; &#xC644;&#xD654;(mitigate)&#xC2DC;&#xD0A4;&#xAE30; &#xC704;&#xD574; &apos;masked&apos;&#xB41C; &#xD1A0;&#xD070;&#xC744; &#xC2E4;&#xC81C; [MASK] &#xD1A0;&#xD070;&#xC73C;&#xB85C; &#xD56D;&#xC0C1; &#xB300;&#xCCB4;&#xC2DC;&#xD0A4;&#xC9C4; &#xC54A;&#xC74C;</li>
+<li>&#xC544;&#xB798;&#xC758; &#xBC29;&#xC2DD;&#xC73C;&#xB85C; &#xC9C4;&#xD589;&#xD569;&#xB2C8;&#xB2E4;.</li>
+</ul>
+<pre data-role="codeBlock" data-info class="language-"><code>My dog is hairy&#xB77C;&#xB294; &#xBB38;&#xC7A5;&#xC774; &#xC788;&#xB2E4;&#xACE0; &#xAC00;&#xC815;&#xD558;&#xC790;.
+
+&#xD559;&#xC2B5; &#xB370;&#xC774;&#xD130; &#xC0DD;&#xC131;&#xC790;&#xB294; &#xC608;&#xCE21;&#xC744; &#xC704;&#xD574; &#xBB34;&#xC791;&#xC704;&#xB85C; 15%&#xC758; token position&#xC744; &#xACE0;&#xB978;&#xB2E4;.
+&#xB9CC;&#xC77C; 4&#xBC88;&#xC9F8; &#xD1A0;&#xD070;&#xC774; &#xACE8;&#xB77C;&#xC84C;&#xB2E4;&#xACE0; &#xAC00;&#xC815;&#xD558;&#xC790;.
+&#xADF8;&#xB7EC;&#xBA74; BERT&#xB294; 4&#xBC88;&#xC9F8; &#xD1A0;&#xD070;&#xC744;
+  (1) 80%&#xC758; &#xD655;&#xB960;&#xB85C; [MASK] &#xD1A0;&#xD070;&#xC73C;&#xB85C;,
+      My dog is hairy -&gt; My dog is [MASK]
+  (2) 10%&#xC758; &#xD655;&#xB960;&#xB85C; &#xC784;&#xC758;&#xC758; &#xD1A0;&#xD070;&#xC73C;&#xB85C; &#xBCC0;&#xD654;&#xC2DC;&#xD0A4;&#xACE0;
+      My dog is hairy -&gt; My dog is apple
+  (3) 10%&#xC758; &#xD655;&#xB960;&#xB85C; &#xADF8;&#xB300;&#xB85C; &#xB454;&#xB2E4;.
+      My dog is hairy -&gt; My dog is hairy
+&#xADF8;&#xB7EC;&#xBA74; cross entropy loss&#xB85C; original token&#xB97C; &#xC608;&#xCE21;&#xD558;&#xAE30; &#xC704;&#xD574; T_i&#xAC00; &#xC0AC;&#xC6A9;&#xB420; &#xAC83;&#xC774;&#xB2E4;.
+</code></pre><p>&#xC704; &#xACFC;&#xC815;&#xC758; &#xC7A5;&#xC810;&#xC740; <strong>Transformer encoder&#xAC00; &#xC608;&#xCE21;&#xD560; &#xB2E8;&#xC5B4;&#xB97C; &#xBAA8;&#xB974;&#xB3C4;&#xB85D; &#xD55C;&#xB2E4;&#xB294; &#xC810;</strong>. &#xC774;&#xB294; <em>&#xBAA8;&#xB4E0;</em> &#xC785;&#xB825; &#xD1A0;&#xD070;&#xC758; &#xB9E5;&#xB77D;&#xC801; &#xD45C;&#xD604; &#xBD84;&#xD3EC;&#xB97C; &#xC720;&#xC9C0;&#xD558;&#xB3C4;&#xB85D; &#xAC15;&#xC81C;. &#xAC8C;&#xB2E4;&#xAC00; random replacement&#xB294; &#xBAA8;&#xB4E0; &#xD1A0;&#xD070;&#xC758; 10~15% &#xC815;&#xB3C4;&#xB9CC; &#xC77C;&#xC5B4;&#xB098;&#xAE30; &#xB54C;&#xBB38;&#xC5D0; &#xBAA8;&#xB378;&#xC758; language understanding parameter(capacity&#xB77C;&#xACE0; &#xB3FC;&#xC788;&#xC9C0;&#xB9CC; &#xB0B4;&#xC6A9;&#xC0C1;?)&#xC5D0;&#xB294; &#xB098;&#xC05C; &#xC601;&#xD5A5;&#xC744; &#xB07C;&#xCE58;&#xB294; &#xAE30;&#xC0C9;&#xC740; &#xC5C6;&#xC5C8;&#xB2E4;.</p>
+<p>&#xAE30;&#xC874;&#xC758; LM &#xD559;&#xC2B5;&#xACFC; &#xBE44;&#xAD50;&#xD558;&#xC5EC; MLM&#xC740; &#xAC01; batch&#xC5D0;&#xC11C; 15%&#xC758; &#xC608;&#xCE21;&#xAC12;&#xC744; &#xB9CC;&#xB4E0;&#xB2E4;. &#xB54C;&#xBB38;&#xC5D0; model coverage&#xB97C; &#xC704;&#xD574; pre-training step&#xC774; &#xB354; &#xD544;&#xC694;&#xD560; &#xC218;&#xB3C4; &#xC788;&#xB2E4;. C.1&#xC5D0;&#xC11C; MLM&#xC774; l2r &#xBAA8;&#xB378;&#xBCF4;&#xB2E4; &#xC81C;&#xD55C;&#xC801;&#xC73C;&#xB85C; &#xBAA8;&#xB4E0; &#xD1A0;&#xD070;&#xC744; &#xC608;&#xCE21;&#xD558;&#xB294; coverage&#xC5D0;&#xC11C; &#xB290;&#xB9AC;&#xC9C0;&#xB9CC; training cost&#xB97C; &#xC99D;&#xAC00;&#xC2DC;&#xD0AC;&#xC218;&#xB85D; &#xC2E4;&#xD5D8;&#xC801;&#xC73C;&#xB85C; &#xC131;&#xB2A5; &#xAC1C;&#xC120;&#xC774; &#xB410;&#xB2E4;.(&#xC131;&#xB2A5; &#xAC1C;&#xC120;&#xC774; &#xB41C;&#xAC74;&#xC9C0; &#xC18D;&#xB3C4; &#xAC1C;&#xC120;&#xC774; &#xB41C;&#xAC74;&#xC9C0;?)</p>
+<h4 class="mume-header" id="task-2-next-sentence-prediction-nsp">Task #2: Next Sentence Prediction (NSP)</h4>
+
+<p>QA&#xC640; NLI&#xAC19;&#xC740; NLP&#xC5D0;&#xC11C; &#xC911;&#xC694;&#xD55C; downstream task&#xB4E4;&#xC740; &#xB450; &#xBB38;&#xC7A5; &#xC0AC;&#xC774;&#xC758; <code>relationship</code>&#xC744; &#xC774;&#xD574;&#xD558;&#xB294; &#xAC83;&#xC5D0; &#xAE30;&#xBC18;&#xC744; &#xB454;&#xB2E4;. &#xC774; &#xB450; &#xBB38;&#xC7A5; &#xC0AC;&#xC774;&#xC758; &quot;&#xAD00;&#xACC4;&quot;&#xB294; &#xBCF4;&#xD1B5; LM&#xC73C;&#xB85C;&#xB294; &#xC9C1;&#xAD00;&#xC801;&#xC73C;&#xB85C; &#xD3EC;&#xCC29;&#xB418;&#xC9C0; &#xC54A;&#xB294;&#xB2E4;. &#xBAA8;&#xB378;&#xC774; &#xBB38;&#xC7A5; &#xC0AC;&#xC774;&#xC758; &#xAD00;&#xACC4;&#xB97C; &#xC774;&#xD574;&#xD560; &#xC218; &#xC788;&#xB3C4;&#xB85D; &#xB2E8;&#xC77C; &#xC5B8;&#xC5B4; &#xCF54;&#xD37C;&#xC2A4;&#xC5D0;&#xC11C; &#xC0DD;&#xC131;&#xB41C; <code>binarized next sentence prediction task</code>&#xB97C; pre-train&#xC2DC;&#xD0A8;&#xB2E4;. &#xD2B9;&#xBCC4;&#xD55C; &#xACBD;&#xC6B0;&#xB85C; &#xAC01; &#xC0AC;&#xC804;&#xD559;&#xC2B5; &#xC608;&#xC81C;&#xC5D0;&#xC11C; sentence A&#xC640; sentence B&#xB97C; &#xBF51;&#xC558;&#xB2E4;&#xACE0; &#xAC00;&#xC815;&#xD558;&#xC790;. &#xAC01; step&#xBCC4; 50%&#xC758; &#xD655;&#xB960;&#xB85C; B&#xB294; A&#xC758; &#xC2E4;&#xC81C; &#xB2E4;&#xC74C; &#xBB38;&#xC7A5;(&#xC774;&#xB97C; <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext>IsNext</mtext></mrow><annotation encoding="application/x-tex">\text{IsNext}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord text"><span class="mord">IsNext</span></span></span></span></span>&#xB77C;&#xACE0; &#xB77C;&#xBCA8;&#xB9C1;), &#xADF8;&#xB9AC;&#xACE0; 50%&#xC758; &#xD655;&#xB960;&#xB85C; B&#xB97C; corpus&#xC758; &#xC784;&#xC758;&#xC758; &#xBB38;&#xC7A5;&#xC73C;&#xB85C; &#xCD94;&#xCD9C;&#xB41C;&#xB2E4;(&#xC774;&#xB97C; <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext>NotNext</mtext></mrow><annotation encoding="application/x-tex">\text{NotNext}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord text"><span class="mord">NotNext</span></span></span></span></span>&#xB77C;&#xACE0; &#xB77C;&#xBCA8;&#xB9C1;). <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi></mrow><annotation encoding="application/x-tex">C</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.07153em;">C</span></span></span></span>&#xB294; &#xB2E4;&#xC74C; sentence prediction&#xC744; &#xC704;&#xD574; &#xC0AC;&#xC6A9;&#xB41C;&#xB2E4;(&#xCD5C;&#xC885; &#xBAA8;&#xB378;&#xC740; NSP&#xC5D0;&#xC11C; 97-98%&#xC758; &#xC815;&#xD655;&#xB3C4;&#xB97C; &#xB2EC;&#xC131;&#xD588;&#xB2E4;). &#xC774;&#xB807;&#xAC8C;&#xB098; &#xB2E8;&#xC21C;&#xD568;&#xC5D0;&#xB3C4; &#xBD88;&#xAD6C;&#xD558;&#xACE0; QA&#xC640; NLI &#xBAA8;&#xB450;&#xC5D0;&#xC11C; &#xB108;&#xBB34;&#xB098; &#xC88B;&#xC740; &#xD6A8;&#xACFC;&#xB97C; &#xBCF4;&#xC5EC;&#xC92C;&#xB2E4;!!</p>
+<ul>
+<li><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi></mrow><annotation encoding="application/x-tex">C</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.07153em;">C</span></span></span></span>&#xB294; NSP&#xC5D0;&#xC11C; &#xD559;&#xC2B5;&#xB410;&#xAE30; &#xB54C;&#xBB38;&#xC5D0; fine-tuning&#xC774; &#xC5C6;&#xC73C;&#xBA74; &#xC758;&#xBBF8;&#xC788;&#xB294; &#xBB38;&#xC7A5; &#xD45C;&#xD604;&#xC744; &#xB0B4;&#xD3EC;&#xD558;&#xC9C0; &#xBABB;&#xD55C;&#xB2E4;.</li>
+</ul>
+<p>NSP(Next sentence Prediction) task&#xB294; &#xC544;&#xB798; &#xB450; &#xB17C;&#xBB38;&#xC5D0;&#xC11C; &#xC0AC;&#xC6A9;&#xB41C; &#xD45C;&#xD604; &#xD559;&#xC2B5; objective&#xACFC; &#xAE34;&#xBC00;&#xD55C; &#xC5F0;&#xAD00;&#xC131;&#xC774; &#xC788;&#xB2E4;.</p>
+<ul>
+<li>Discourse-Based Objectives for Fast Unsupervised Sentence Representation Learning, Jernite et al., 2017</li>
+<li>An efficient framework for learning sentence representations, Logeswaran and Lee, 2018</li>
+</ul>
+<p>&#xADF8;&#xB7EC;&#xB098; &#xC120;&#xD589; &#xC5F0;&#xAD6C;&#xC5D0;&#xC11C;&#xB294; &#xC624;&#xC9C1; &#xBB38;&#xC7A5; &#xC784;&#xBCA0;&#xB529;&#xB9CC;&#xC774; down-stream task&#xB85C; &#xC804;&#xB2EC;&#xB418;&#xB294;&#xB370; &#xBC18;&#xD574; BERT&#xB294; end-task model&#xC758; &#xBAA8;&#xC218;&#xB97C; &#xCD08;&#xAE30;&#xD654;&#xD558;&#xAE30; &#xC704;&#xD574; &#xBAA8;&#xB4E0; parameter&#xB97C; &#xC804;&#xC774;(transfer)&#xD55C;&#xB2E4;.</p>
+<h2 class="mume-header" id="pre-training-data">Pre-training data</h2>
+
+<p>&#xC0AC;&#xC804; &#xD559;&#xC2B5; &#xACFC;&#xC815;&#xC740; &#xD604;&#xC874;&#xD558;&#xB294; LM pre-training &#xC790;&#xB8CC;&#xB4E4;&#xC744; &#xB530;&#xB978;&#xB2E4;. pre-training corpus&#xB85C; BooksCorpus(800M words)&#xC640; English Wikipedia(2,500M words)&#xB97C; &#xC0AC;&#xC6A9;&#xD588;&#xB2E4;. Wikipedia&#xC758; &#xACBD;&#xC6B0; &#xC624;&#xC9C1; &#xD14D;&#xC2A4;&#xD2B8; &#xAD6C;&#xC808;&#xB9CC; &#xCD94;&#xCD9C;&#xD558;&#xACE0; &#xB9AC;&#xC2A4;&#xD2B8;, &#xD45C;, &#xBA38;&#xB9AC;&#xB9D0;(header)&#xB294; &#xBC30;&#xC81C;(ignore)&#xD588;&#xB2E4;. &#xB610; wikipedia&#xAC19;&#xC740; &#xBB38;&#xC11C; &#xB2E8;&#xC704;&#xC758; &#xB9D0;&#xBB49;&#xCE58;&#xB97C; &#xC0AC;&#xC6A9;&#xD558;&#xB294; &#xAC83;&#xC774; &#xAE38;&#xACE0; &#xC5F0;&#xC18D;&#xC801;&#xC778; sequence&#xB97C; &#xCD94;&#xCD9C;&#xD558;&#xAE30; &#xC704;&#xD55C; Billion Word Benchmark&#xC640; &#xAC19;&#xC740; &#xC154;&#xD50C;&#xB41C; &#xBB38;&#xC7A5; &#xB2E8;&#xC704;&#xC758; &#xB9D0;&#xBB49;&#xCE58;&#xB97C; &#xC0AC;&#xC6A9;&#xD558;&#xB294; &#xAC83;&#xBCF4;&#xB2E4; &#xB354; &#xC911;&#xC694;&#xD558;&#xAC8C; &#xC791;&#xC6A9;&#xD588;&#xB2E4;.</p>
+<h3 class="mume-header" id="32-fine-tuning-bert">3.2 Fine-tuning BERT</h3>
+
+<ul>
+<li>BERT&#xC758; fine-tuning&#xC740; &#xAC04;&#xB2E8;&#xD558;&#xB2E4;.</li>
+<li>NLP&#xC758; &#xC5EC;&#xB7EC; &#xD0DC;&#xC2A4;&#xD06C;&#xAC00; &#xC788;&#xC744; &#xAC83;&#xC774;&#xB2E4;.
+<ul>
+<li>Paraphrasing</li>
+<li>Textual Entailment</li>
+<li>Question Answering</li>
+<li>Text Classification</li>
+<li>Sentiment Analysis</li>
+</ul>
+</li>
+<li>token representation&#xC740; task&#xC758; output layer&#xB85C;,</li>
+<li>[CLS] representation&#xC740; &#xBD84;&#xB958; output layer&#xB85C; feeding (&#xC5B4;&#xB5A4; task&#xC778;&#xC9C0;&#xB85C;!)</li>
+</ul>
+<p>&#xC989;, text-pair&#xB97C; encode&#xD558;&#xB294; &#xACFC;&#xC815;&#xACFC; bidirectional cross attention&#xC744; &#xC801;&#xC6A9;&#xD558;&#xB294; &#xB450; &#xACFC;&#xC815;&#xC774; &#xC874;&#xC7AC;&#xD55C;&#xB2E4;. BERT&#xB294; &#xC774; &#xB450; &#xB2E8;&#xACC4;&#xB97C; &#xD1B5;&#xD569;&#xD558;&#xAE30; &#xC704;&#xD574; self-attention mechanism&#xC744; &#xC0AC;&#xC6A9;&#xD55C;&#xB2E4;. concat&#xB41C; text-pair&#xB97C; self-attention&#xC73C;&#xB85C; &#xBD80;&#xD638;&#xD654;&#xD558;&#xB294; &#xAC83;&#xC740; &#xB450; &#xBB38;&#xC7A5; &#xAC04;&#xC758; bidirectional cross attention&#xC744; &#xD3EC;&#xD568;&#xD558;&#xAE30; &#xB54C;&#xBB38;&#xC774;&#xB2E4;.</p>
+<p>&#xAC01; task&#xC5D0;&#xC11C; &#xB2E8;&#xC21C;&#xD558;&#xAC8C; BERT&#xC5D0; task &#xD2B9;&#xD654; input&#xACFC; output&#xC744; &#xB123;&#xC5B4;&#xC8FC;&#xACE0; &#xBAA8;&#xB4E0; parameter&#xB97C; end-to-end&#xB85C; fine-tuning&#xD588;&#xB2E4;. pre-training&#xC758; &#xBAA8;&#xB4E0; input sentence A&#xC640; sentence B&#xB294; (1) paraphrasing&#xC758; sentence pair, (2) <code>hypothesis-premise pairs in entailment</code>, (3) QA&#xC758; question-passage &#xC30D;, (4) text &#xBD84;&#xB958; &#xD639;&#xC740; sequence tagging&#xC758; degenerate text-<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">&#x2205;</mi></mrow><annotation encoding="application/x-tex">\empty</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.80556em;vertical-align:-0.05556em;"></span><span class="mord">&#x2205;</span></span></span></span> &#xC30D;&#xACFC; &#xC720;&#xC0AC;&#xD558;&#xB2E4;. Output&#xC5D0;&#xC11C; token representation&#xC740; sequence tagging &#xD639;&#xC740; question answering&#xACFC; &#xAC19;&#xC740; token &#xB2E8;&#xC704; task&#xC758; output layer&#xB85C; feeding&#xB418;&#xBA70; [CLS] &#xD45C;&#xD604;&#xC740; entailment&#xB098; sentiment analysis&#xC640; &#xAC19;&#xC740; &#xBD84;&#xB958; output layer&#xB85C; feeding&#xB41C;&#xB2E4;.</p>
+<p>&#xC0AC;&#xC804; &#xD559;&#xC2B5;&#xACFC; &#xBE44;&#xAD50;&#xD558;&#xC5EC; fine-tuning&#xC740; &#xBE44;&#xAD50;&#xC801; cost&#xAC00; &#xC801;&#xAC8C; &#xB4E0;&#xB2E4;. &#xBCF8; &#xC5F0;&#xAD6C;&#xC758; &#xBAA8;&#xB4E0; &#xACB0;&#xACFC;&#xB294; pre-training model&#xACFC; &#xC815;&#xD655;&#xD788; &#xAC19;&#xAC8C; &#xC2DC;&#xC791;&#xD588;&#xC73C;&#xB098; &#xB2E8;&#xC77C; Cloud TPU&#xB85C; &#xD55C;&#xC2DC;&#xAC04;, GPU&#xB85C;&#xB294; &#xC218; &#xC2DC;&#xAC04;&#xB9CC;&#xC774; &#xAC78;&#xB838;&#xB2E4;.</p>
+<h4 class="mume-header" id="a1-illustration-of-the-pre-training-tasks">A.1 Illustration of the Pre-training Tasks</h4>
+
+<p><strong>Next Sentence Prediction</strong><br>
+NSP task&#xB294; &#xC544;&#xB798; &#xC608;&#xC81C;&#xC640; &#xAC19;&#xC774; &#xB9CC;&#xB4E4;&#xC5B4;&#xC9C4;&#xB2E4;.</p>
+<pre data-role="codeBlock" data-info class="language-"><code>Input = [CLS] the man went to [MASK] store [SEP]
+        he bought a gallon [MASK] milk [SEP]
+
+Label = IsNext
+</code></pre><pre data-role="codeBlock" data-info class="language-"><code>Input = [CLS] the man [MASK] to the store [SEP]
+        penguin [MASK] are flight ##less birds [SEP]
+
+Label = NotNext
+</code></pre><h4 class="mume-header" id="a2-pre-training-procedure">A.2 Pre-training Procedure</h4>
+
+<ul>
+<li>&#xBD80;&#xC81C;: &#xAD34;&#xBB3C;&#xAC19;&#xC740; &#xAD6C;&#xAE00; &#xB188;&#xB4E4;...</li>
+</ul>
+<p>&#xAC01; &#xD6C8;&#xB828; &#xC785;&#xB825; sequence&#xB97C; &#xC0DD;&#xC131;&#xD558;&#xAE30; &#xC704;&#xD574; &#xB9D0;&#xBB49;&#xCE58;&#xB85C;&#xBD80;&#xD130; &#xB450; <code>spans of text</code>&#xB97C; &#xCD94;&#xCD9C;&#xD55C;&#xB2E4;.</p>
+<ul>
+<li>&#xC774;&#xB294; <code>sentences</code>&#xB77C; &#xBD80;&#xB97C; &#xAC83;&#xC778;&#xB370; &#xC774;&#xB294; &#xB2E8;&#xC77C; &#xBB38;&#xC7A5;&#xBCF4;&#xB2E4; &#xBCF4;&#xD1B5; &#xAE38;&#xACE0; &#xC9E7;&#xC744; &#xC218;&#xB3C4; &#xC788;&#xB2E4;&#xACE0; &#xD55C;&#xB2E4;.</li>
+</ul>
+<p>&#xCCAB; &#xBB38;&#xC7A5;&#xC740; A embedding, &#xB458; &#xC9F8; &#xBB38;&#xC7A5;&#xC740; B embedding&#xC73C;&#xB85C; B&#xB294; 50% &#xD655;&#xB960;&#xB85C; A&#xC758; &#xC2E4;&#xC81C; &#xB2E4;&#xC74C; &#xBB38;&#xC7A5;&#xC774; &#xB4E4;&#xC5B4;&#xC624;&#xBA70; &#xB098;&#xBA38;&#xC9C0; 50%&#xC758; &#xD655;&#xB960;&#xB85C; &#xC784;&#xC758;&#xC758; &#xBB38;&#xC7A5;&#xC774; &#xB4E4;&#xC5B4;&#xC628;&#xB2E4;. A&#xC640; B&#xC758; token length&#xAC00; 512&#xAC1C;&#xB97C; &#xB118;&#xC9C0; &#xC54A;&#xAC8C; sampling&#xB418;&#xBA70; LM masking&#xC740; &#xC815;&#xADDC; masking rate&#xB85C; 15%&#xC758; &#xD655;&#xB960;&#xC744; &#xC801;&#xC6A9;&#xD558;&#xC5EC; WordPiece tokenization&#xC744; &#xC801;&#xC6A9;&#xD55C; &#xC774;&#xD6C4; &#xC801;&#xC6A9;&#xB418;&#xBA70; <code>no special consideration given to partial word pieces</code></p>
+<p>batch size&#xB294; 256&#xAC1C;&#xC758; sequence&#xB85C; &#xC124;&#xC815;&#xD588;&#xB2E4;(256 sequences * 512 tokens = 128,000 tokens / batch). 1,000,000 step&#xC73C;&#xB85C; 40 epoch&#xC744; 3.3 billion word corpus&#xC5D0;&#xC11C; &#xB3CC;&#xB838;&#xB2E4;. Adam Optimizer&#xB97C; &#xC0AC;&#xC6A9;&#xD588;&#xACE0; learning rate&#xB294; 1e-4, <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>&#x3B2;</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">\beta_1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.05278em;">&#x3B2;</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.05278em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>&#xC740; 0.9, <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>&#x3B2;</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">\beta_2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.05278em;">&#x3B2;</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.05278em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>&#xB294; 0.999, L2 weight decay&#xB294; 0.01&#xC744; &#xC0AC;&#xC6A9;&#xD588;&#xB2E4;. learning rate warmup&#xC740; 10,000 step&#xC774;&#xD6C4;&#xC5D0; linear decay&#xB85C; &#xC9C4;&#xD589;&#xD588;&#xB2E4;. &#xBAA8;&#xB4E0; layer&#xC5D0; 0.1 dropout probability&#xB97C; &#xC801;&#xC6A9;&#xD588;&#xACE0; relu&#xB9D0;&#xACE0; OpenAI GPT&#xB97C; &#xB530;&#xB77C; gelu activation function&#xC744; &#xC0AC;&#xC6A9;&#xD588;&#xB2E4;. training loss&#xB294; MLM, NSP &#xC6B0;&#xB3C4;&#xC758; &#xD3C9;&#xADE0;&#xC758; &#xD569;&#xC744; &#xC0AC;&#xC6A9;&#xD588;&#xB2E4;.</p>
+<p><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mtext>BERT</mtext><mtext>BASE</mtext></msub></mrow><annotation encoding="application/x-tex">\text{BERT}_{\text{BASE}}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord text"><span class="mord">BERT</span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord text mtight"><span class="mord mtight">BASE</span></span></span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>&#xC758; &#xD559;&#xC2B5;&#xC740; Pod configuration&#xC758; 4 Cloud TPUs&#xB85C; &#xC218;&#xD589;&#xB410;&#xB2E4;(&#xCD1D; 16&#xAC1C;&#xC758; TPU chip&#xC744; &#xC0AC;&#xC6A9;&#xD55C;&#xB2E4;). <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mtext>BERT</mtext><mtext>LARGE</mtext></msub></mrow><annotation encoding="application/x-tex">\text{BERT}_{\text{LARGE}}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord text"><span class="mord">BERT</span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord text mtight"><span class="mord mtight">LARGE</span></span></span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>&#xC758; &#xD559;&#xC2B5;&#xC740; 16 Cloud TPUs&#xB85C; &#xC218;&#xD589;&#xB410;&#xB2E4;(&#xCD1D; 64&#xAC1C;&#xC758; TPU chip&#xC744; &#xC0AC;&#xC6A9;&#xD55C;&#xB2E4;). &#xAC01; pre-training&#xC740; &#xB05D;&#xB098;&#xB294;&#xB370; 4&#xC77C;&#xC774; &#xAC78;&#xB838;&#xB2E4;.</p>
+<p>attention&#xC774; sequence length&#xC758; quadratic(&#xC81C;&#xACF1;)&#xC774;&#xAE30; &#xB54C;&#xBB38;&#xC5D0; sequence&#xAC00; &#xAE38;&#xC5B4;&#xC9C0;&#xBA74; &#xBD80;&#xBD84;&#xC801;&#xC73C;&#xB85C; cost&#xAC00; &#xB354; &#xB9CE;&#xC774; &#xBC1C;&#xC0DD;&#xD55C;&#xB2E4;. &#xC2E4;&#xD5D8;&#xC5D0;&#xC11C; pretraining &#xC18D;&#xB3C4;&#xB97C; &#xC99D;&#xC9C4;&#xC2DC;&#xD0A4;&#xAE30; &#xC704;&#xD574; &#xAC01; step&#xC758; 90%&#xB97C; 128 length&#xB85C; &#xC81C;&#xD55C;&#xD588;&#xB2E4;. <code>Then, we train the rest 10% of the steps of sequence of 512 to learn the positional embeddings</code></p>
+<h4 class="mume-header" id="a3-fine-tuning-procedure">A.3 Fine-tuning Procedure</h4>
+
+<p>Fine-tuning&#xC5D0;&#xC11C; &#xB300;&#xBD80;&#xBD84;&#xC758; &#xCD08;&#xBAA8;&#xC218;&#xB4E4;&#xC740; pre-training&#xACFC; &#xB3D9;&#xC77C;&#xD558;&#xAC8C; &#xC124;&#xC815;&#xD588;&#xC73C;&#xB098; batch_size, learning_rate, training epoch&#xB294; &#xB2E4;&#xB974;&#xAC8C; setting&#xD588;&#xB2E4;. drpoout &#xD655;&#xB960;&#xC740; &#xD56D;&#xC0C1; 0.1&#xB85C; &#xC720;&#xC9C0;&#xD588;&#xACE0; &#xCD5C;&#xC801;&#xC758; &#xCD08;&#xBAA8;&#xC218;&#xB294; task&#xC5D0; &#xB530;&#xB77C; &#xB2E4;&#xB974;&#xC9C0;&#xB9CC; &#xC804;&#xBC18;&#xC801;&#xC73C;&#xB85C; &#xCD5C;&#xC801;&#xC758; &#xC131;&#xB2A5;&#xC744; &#xBCF4;&#xC600;&#xB358; parameter&#xB294; &#xC544;&#xB798;&#xC640; &#xAC19;&#xC558;&#xB2E4;.</p>
+<ul>
+<li>Batch size: 16, 32</li>
+<li>Learning rate (Adam): 5e-5, 3e-5, 2e-5</li>
+<li>Number of epochs: 2, 3, 4</li>
+</ul>
+<p>&#xB610;&#xD55C; &#xAD6C;&#xAE00;&#xB188;&#xB4E4;&#xC740; small datasets&#xBCF4;&#xB2E4; large dataset(&#xC608;&#xB85C; 100k+&#xC758; label&#xB41C; &#xD559;&#xC2B5; &#xB370;&#xC774;&#xD130; &#xC0D8;&#xD50C;)&#xC740; &#xCD08;&#xBAA8;&#xC218; &#xC120;&#xD0DD;&#xC5D0; &#xB35C; &#xBBFC;&#xAC10;&#xD558;&#xB2E4;&#xB294; &#xAC83;&#xC744; &#xBC1D;&#xD600;&#xB0C8;&#xB2E4;. Fine-tuning&#xC740; &#xD1B5;&#xC0C1;&#xC801;&#xC73C;&#xB85C; &#xB9E4;&#xC6B0; &#xBE60;&#xB974;&#xBA70; &#xB530;&#xB77C;&#xC11C; &#xC704;&#xC758; &#xB9E4;&#xAC1C; &#xBCC0;&#xC218;&#xB97C; &#xCCA0;&#xC800;&#xD788; &#xAC80;&#xC0C9;&#xD558;&#xACE0; &#xAC1C;&#xBC1C; &#xC138;&#xD2B8;&#xC5D0;&#xC11C; &#xAC00;&#xC7A5; &#xC798; &#xC218;&#xD589;&#xB418;&#xB294; &#xBAA8;&#xB378;&#xC744; &#xC120;&#xD0DD;&#xD558;&#xB294; &#xAC83;&#xC774; &#xD569;&#xB9AC;&#xC801;&#xC784;.</p>
+<h4 class="mume-header" id="a4-comparisoin-of-bert-elmo-and-openai-gpt">A.4 Comparisoin of BERT, ELMo, and OpenAI GPT</h4>
+
+<p>ELMo, GPT&#xC640; BERT&#xB97C; &#xBE44;&#xAD50;&#xD574;&#xBD05;&#xC2DC;&#xB2E4;.<br>
+<img src="https://user-images.githubusercontent.com/37775784/79835421-a9f13f80-83e9-11ea-924a-f4c5bdd407e4.PNG" alt="comparison_elmo_gpt_bert"></p>
+<p>&#xC6B0;&#xC120;, <code>BERT</code>&#xC640; <code>GPT</code>&#xB294; <code>fine-tuning</code> &#xC811;&#xADFC; &#xBC29;&#xC2DD; &#xADF8;&#xB9AC;&#xACE0; <code>ELMo</code>&#xB294; <code>feature-based</code> &#xC811;&#xADFC; &#xBC29;&#xC2DD;&#xC774;&#xB2E4;.</p>
+<p>GPT&#xB294; &#xB9E4;&#xC6B0; &#xD070; &#xD14D;&#xC2A4;&#xD2B8; &#xB9D0;&#xBB49;&#xCE58;&#xB97C; &#xD559;&#xC2B5;&#xD55C; l2r Transformer LM&#xC774;&#xB2E4;. &#xC0AC;&#xC2E4; BERT&#xC758; &#xB9CE;&#xC740; &#xB514;&#xC790;&#xC778; &#xACB0;&#xC815; &#xC0AC;&#xD56D;&#xC740; &#xAC00;&#xB2A5;&#xD55C; GPT&#xC640; &#xC720;&#xC0AC;&#xD558;&#xAC8C; &#xB9CC;&#xB4E4;&#xB824;&#xACE0; &#xD588;&#xACE0; &#xD55C; &#xB450; &#xAC00;&#xC9C0; &#xBC29;&#xBC95;&#xB860;&#xC744; &#xBC14;&#xAFB8;&#xB824; &#xC2DC;&#xB3C4;&#xD588;&#xB2E4;. &#xC774; &#xB450; &#xAC00;&#xC9C0; &#xCC28;&#xC774;&#xC810;&#xC740; (1) <code>bi-directionality</code>&#xC640; (2) <code>Masked Language Model</code>, <code>Next Sentence Prediction</code>&#xC774;&#xACE0; &#xC2E4;&#xD5D8;&#xC801;&#xC73C;&#xB85C; &#xAC1C;&#xC120;&#xC2DC;&#xCF30;&#xC73C;&#xB098; &#xBA87; &#xAC00;&#xC9C0; &#xC138;&#xBD80;&#xC801;&#xC778; &#xCE58;&#xC774;&#xC810;&#xC774; &#xC874;&#xC7AC;&#xD558;&#xC5EC; &#xC544;&#xB798;&#xC5D0; &#xAE30;&#xC220;&#xD55C;&#xB2E4;.</p>
+<ul>
+<li>GPT&#xB294; BooksCorpus(800M &#xB2E8;&#xC5B4;)&#xC5D0;&#xC11C; &#xD559;&#xC2B5;&#xB41C; &#xAC83;&#xC5D0; &#xBC18;&#xD574; BERT&#xB294; BooksCorpus(800M &#xB2E8;&#xC5B4;)&#xC640; Wikipedia(2,500M &#xB2E8;&#xC5B4;)&#xB85C; &#xD559;&#xC2B5;&#xB410;&#xB2E4;.</li>
+<li>GPT&#xB294; fine-tuning &#xB2E8;&#xACC4;&#xC5D0;&#xC11C;&#xB9CC; sentence separator([SEP])&#xACFC; classifier token([CLS])&#xB97C; &#xC0AC;&#xC6A9;&#xD558;&#xC9C0;&#xB9CC; BERT&#xB294; [SEP], [CLS], &#xADF8;&#xB9AC;&#xACE0; &#xBB38;&#xC7A5; A/B embedding&#xC740; &#xC0AC;&#xC804; &#xD559;&#xC2B5; &#xC911;&#xC5D0; &#xD559;&#xC2B5;&#xD55C;&#xB2E4;.</li>
+<li>GPT&#xB294; 1M step&#xC73C;&#xB85C; &#xD559;&#xC2B5;&#xD558;&#xBA70; 32,000&#xAC1C; &#xB2E8;&#xC5B4;&#xB97C; batch&#xB85C; &#xC0AC;&#xC6A9;&#xD558;&#xB294;&#xB370; &#xBC18;&#xD574; BERT&#xB294; 1M step&#xC744; &#xD559;&#xC2B5;&#xD560; &#xB54C; 128,000&#xAC1C;&#xC758; &#xB2E8;&#xC5B4;&#xB97C; batch&#xB85C; &#xC0AC;&#xC6A9;&#xD55C;&#xB2E4;.</li>
+<li>GPT&#xB294; &#xBAA8;&#xB4E0; fine-tuning &#xC2E4;&#xD5D8;&#xC5D0;&#xC11C; learning rate&#xB97C; 5e-5&#xB97C; &#xC0AC;&#xC6A9;&#xD558;&#xB294;&#xB370; &#xBC18;&#xD574; BERT&#xB294; task&#xC5D0; &#xD2B9;&#xD654;&#xB41C; fine-tuning learning rate&#xB97C; &#xC0AC;&#xC6A9;&#xD558;&#xC5EC; dev set&#xC5D0;&#xC11C; &#xCD5C;&#xC0C1;&#xC758; &#xC131;&#xB2A5;&#xC744; &#xAC00;&#xC9C0;&#xB3C4;&#xB85D;&#xD55C;&#xB2E4;.</li>
+</ul>
+<p>&#xC704; &#xCC28;&#xC774;&#xC810;&#xC758; &#xD6A8;&#xACFC;&#xB97C; &#xD655;&#xC778;&#xD558;&#xAE30; &#xC704;&#xD574; ablation &#xC2E4;&#xD5D8;&#xC744; &#xC2E4;&#xC2DC;&#xD558;&#xC5EC; &#xB450; pre-training task(MLM&#xACFC; NSP)&#xC640; bidirectionality&#xAC00; &#xD6A8;&#xACFC;&#xC801;&#xC774;&#xB77C;&#xB294; &#xC0AC;&#xC2E4;&#xC744; &#xC99D;&#xBA85;&#xD568;.</p>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    </body></html>
