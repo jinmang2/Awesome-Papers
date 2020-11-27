@@ -1,11 +1,11 @@
 # ShallowMinded
-딥마인드 블로그 포스팅 읽기
+딥마인드 블로그 포스팅 읽기 [google sheet](https://docs.google.com/spreadsheets/d/1tw2tE6Rwag38DPyCdrKq3GcbZaJ9O9Na0k5hN6A0amY/edit#gid=0)
 
 ## Read posts
 
 ### [20.10.05] Open-sourcing DeepMind Lab (16.12.03)
 - 딥마인드의 오픈소스 랩에 대한 설명
-  
+
 ### [20.10.05] Our collaborations with academia to advance the field of AI (17.01.23)
 - 학계와 협력하는 최고의 스타트업. 하사비스의 철학 또한 다시 엿볼 수 있었음
 
@@ -15,7 +15,7 @@
   - 주로 인지 과학, 윤리, 실용주의 철학 등에서 연구된다고 한다.
   - 합리적인 판단 -> selfish하게 비춰질 수 있으나, 명확한 목적을 가지고 행동하는 봇이라고 이해하면 될 듯 하다
 - Deep Multi-Agent Reinforcement Learning
-  
+
 
 **영어 표현**
 - agents' cognitive capacity
