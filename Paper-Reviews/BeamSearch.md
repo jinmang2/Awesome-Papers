@@ -20,7 +20,7 @@
 - 코드는 [여기](https://github.com/rycolab/uid-decoding)서 확인하세여
 
 ## Introduction
-- 모든 Search Space를 탐색하는 것은 불가능 [[1]](#[1]-on-nmt-search-errors-and-model-errors:-cat-got-tour-tongue?)
+- 모든 Search Space를 탐색하는 것은 불가능 [1](#[1]-on-nmt-search-errors-and-model-errors:-cat-got-your-tongue?)
 
 ## Reference
 
