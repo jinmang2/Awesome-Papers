@@ -20,16 +20,21 @@
 - 코드는 [여기](https://github.com/rycolab/uid-decoding)서 확인하세여
 
 ## Introduction
-- 모든 Search Space를 탐색하는 것은 불가능 [1](#[1]-on-nmt-search-errors-and-model-errors:-cat-got-your-tongue?)
+- Beam Search는 NLP의 decoding algorithm의 조상님 [2]
+- 모든 Search Space를 탐색하는 것은 불가능 [3], [4], [5], [6]
+- Beam Search가 모델 하에서 가장 높은 점수를 받은 후보를 반환하거나 근사할 것이라는 정확한 보장은 없지만
+  - 이에 대한 장점을 반복적으로 조사함 [7], [8], [9]
+  - 때문에 NLP의 heuristic search로 받아들여지기도 함
+  
 
 ## Reference
 
 #### [1] [On NMT Search Errors and Model Errors: Cat Got Your Tongue?](https://www.aclweb.org/anthology/D19-1331/)
 ```
-- Authors: Felix Stahlberg, Bill Byrne
-- Publisher: ACL
-- Volume:EMNLP-IJCNLP
-- Year/Month: 2019.11
+Authors: Felix Stahlberg, Bill Byrne
+Publisher: ACL
+Volume:EMNLP-IJCNLP
+Year/Month: 2019.11
 ```
 - Exact MAP decoding은 종종 저품질의 결과를 냄
 - Exact Search의 50% 이상의 사례에서 빈 문자열을 반환
@@ -38,37 +43,40 @@
 
 #### [2] [Speech understanding systems: summary of results of the five-year research effort at Carnegie-Mellon University](https://kilthub.cmu.edu/articles/Speech_understanding_systems_summary_of_results_of_the_five-year_research_effort_at_Carnegie-Mellon_University_/6609821/1)
 ```
-- Raj Reddy
-- Carnegie mellon 1977
+Raj Reddy
+Carnegie mellon 1977
 ```
-- Beam Search는 1970년대부터 NLP의 기초로 계속 이어져왔다.
 
 #### [3] [Recurrent Convolutional Neural Networks for Discourse Compositionality](https://www.aclweb.org/anthology/W13-3214/)
 ```
-- Authors: Nal Kalchbrenner and Phil Blunsom
-- ACL, Proceedings of the Workshop on Continuous Vector Space Models and their Compositionality
-- 2013.08
+Authors: Nal Kalchbrenner and Phil Blunsom
+ACL, Proceedings of the Workshop on Continuous Vector Space Models and their Compositionality
+2013.08
 ```
-- 모든 search space를 탐색하는 것은 불가능 (A)
   
 #### [4] [Sequence to Sequence Learning with Neural Networks](https://proceedings.neurips.cc/paper/2014/file/a14ac55a4f27472c5d894ec1c3c743d2-Paper.pdf)
 ```
-- Ilya Sutskever, Oriol Vinyals, and Quoc V. Le  - .
-- Nips 2014
+Ilya Sutskever, Oriol Vinyals, and Quoc V. Le  - .
+Nips 2014
 ```
-- 모든 search space를 탐색하는 것은 불가능 (A)
 
 #### [5] [A Neural Conversational Model](https://arxiv.org/pdf/1506.05869.pdf)
 ```
-- Authors: Oriol Vinyals and Quoc V. Le. (Google)
-- ICML 2015
+Authors: Oriol Vinyals and Quoc V. Le. (Google)
+ICML 2015
 ```
-- 모든 search space를 탐색하는 것은 불가능 (A)
 
 #### [6] [Neural Generative Question Answering](https://www.aclweb.org/anthology/W16-0106/)
 ```
-- Authors: Jun Yin, Xin Jiang, Zhengdong Lu, Lifeng Shang, Hang Li, and Xiaoming Li
-- ACL, Proceedings of the Workshop on Human-Computer Question Answering
-- 2016.06
+Authors: Jun Yin, Xin Jiang, Zhengdong Lu, Lifeng Shang, Hang Li, and Xiaoming Li
+ACL, Proceedings of the Workshop on Human-Computer Question Answering
+2016.06
 ```
-- 모든 search space를 탐색하는 것은 불가능 (A)
+
+#### [7] [Multiresolution recurrent neural networks: An application to dialogue response generation]()
+```
+Authors: Iulian Serban, Tim Klinger, Gerald Tesauro, Kartik Talamadupula, Bowen Zhou, Yoshua Bengio, and Aaron Courville
+AAAI'17: Proceedings of the Thirty-First AAAI Conference on Artificial IntelligenceFebruary 2017 Pages 3288–3294
+```
+
+#### [8] 
