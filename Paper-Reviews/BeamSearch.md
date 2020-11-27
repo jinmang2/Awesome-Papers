@@ -1,5 +1,5 @@
 # If Beam Search is the Answer, What was the Question?
-[fasdfasd](#reference)
+
 ### Authors
 - Clara Meister, _ETH Zurich_
 - Tim Vieira, _Johns Hopkins University_
@@ -20,11 +20,11 @@
 - 코드는 [여기](https://github.com/rycolab/uid-decoding)서 확인하세여
 
 ## Introduction
-- 모든 Search Space를 탐색하는 것은 불가능
+- 모든 Search Space를 탐색하는 것은 불가능 [[1]](#[1]-on-nmt-search-errors-and-model-errors:-cat-got-tour-tongue?)
 
 ## Reference
 
-[1] [On NMT Search Errors and Model Errors: Cat Got Your Tongue?](https://www.aclweb.org/anthology/D19-1331/)
+#### [1] [On NMT Search Errors and Model Errors: Cat Got Your Tongue?](https://www.aclweb.org/anthology/D19-1331/)
 ```
 - Authors: Felix Stahlberg, Bill Byrne
 - Publisher: ACL
@@ -36,14 +36,14 @@
 - Beam Search의 성공은 Exact Decoding을 근사할 수 있기 때문이라기 보다 알고리즘 내에 포함된 **hidden inductive bias** 때문
 - Beam Search(for smalle k)는 nueral text 생성에서 decoding algorithm으로 사용될 경우 높은 비율의 search error를 가짐
 
-[2] [Speech understanding systems: summary of results of the five-year research effort at Carnegie-Mellon University](https://kilthub.cmu.edu/articles/Speech_understanding_systems_summary_of_results_of_the_five-year_research_effort_at_Carnegie-Mellon_University_/6609821/1)
+#### [2] [Speech understanding systems: summary of results of the five-year research effort at Carnegie-Mellon University](https://kilthub.cmu.edu/articles/Speech_understanding_systems_summary_of_results_of_the_five-year_research_effort_at_Carnegie-Mellon_University_/6609821/1)
 ```
 - Raj Reddy
 - Carnegie mellon 1977
 ```
 - Beam Search는 1970년대부터 NLP의 기초로 계속 이어져왔다.
 
-[3] [Recurrent Convolutional Neural Networks for Discourse Compositionality](https://www.aclweb.org/anthology/W13-3214/)
+#### [3] [Recurrent Convolutional Neural Networks for Discourse Compositionality](https://www.aclweb.org/anthology/W13-3214/)
 ```
 - Authors: Nal Kalchbrenner and Phil Blunsom
 - ACL, Proceedings of the Workshop on Continuous Vector Space Models and their Compositionality
@@ -51,21 +51,21 @@
 ```
 - 모든 search space를 탐색하는 것은 불가능 (A)
   
-[4] [Sequence to Sequence Learning with Neural Networks](https://proceedings.neurips.cc/paper/2014/file/a14ac55a4f27472c5d894ec1c3c743d2-Paper.pdf)
+#### [4] [Sequence to Sequence Learning with Neural Networks](https://proceedings.neurips.cc/paper/2014/file/a14ac55a4f27472c5d894ec1c3c743d2-Paper.pdf)
 ```
 - Ilya Sutskever, Oriol Vinyals, and Quoc V. Le  - .
 - Nips 2014
 ```
 - 모든 search space를 탐색하는 것은 불가능 (A)
 
-[5] [A Neural Conversational Model](https://arxiv.org/pdf/1506.05869.pdf)
+#### [5] [A Neural Conversational Model](https://arxiv.org/pdf/1506.05869.pdf)
 ```
 - Authors: Oriol Vinyals and Quoc V. Le. (Google)
 - ICML 2015
 ```
 - 모든 search space를 탐색하는 것은 불가능 (A)
 
-[6] [Neural Generative Question Answering](https://www.aclweb.org/anthology/W16-0106/)
+#### [6] [Neural Generative Question Answering](https://www.aclweb.org/anthology/W16-0106/)
 ```
 - Authors: Jun Yin, Xin Jiang, Zhengdong Lu, Lifeng Shang, Hang Li, and Xiaoming Li
 - ACL, Proceedings of the Workshop on Human-Computer Question Answering
