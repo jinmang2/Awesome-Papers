@@ -25,6 +25,8 @@
 - Beam Search가 모델 하에서 가장 높은 점수를 받은 후보를 반환하거나 근사할 것이라는 정확한 보장은 없지만
   - 이에 대한 장점을 반복적으로 조사함 [7], [8], [9]
   - 때문에 NLP의 heuristic search로 받아들여지기도 함
+- 그러나 NMT에서 Large K를 사용하는 Beam Search 혹은 Exact Search를 사용하는 것보다 Beam Search를 neural text generator로 사용했을 때 더 나은 text를 생성함
+- [1]에 의하면 Beam Search의 성공은 exact decoding을 근사할 수 있기 때문이 아니라 알고리즘 내에 포함된 **hidden inductive bias** 때문
   
 
 ## Reference
@@ -36,10 +38,6 @@ Publisher: ACL
 Volume:EMNLP-IJCNLP
 Year/Month: 2019.11
 ```
-- Exact MAP decoding은 종종 저품질의 결과를 냄
-- Exact Search의 50% 이상의 사례에서 빈 문자열을 반환
-- Beam Search의 성공은 Exact Decoding을 근사할 수 있기 때문이라기 보다 알고리즘 내에 포함된 **hidden inductive bias** 때문
-- Beam Search(for smalle k)는 nueral text 생성에서 decoding algorithm으로 사용될 경우 높은 비율의 search error를 가짐
 
 #### [2] [Speech understanding systems: summary of results of the five-year research effort at Carnegie-Mellon University](https://kilthub.cmu.edu/articles/Speech_understanding_systems_summary_of_results_of_the_five-year_research_effort_at_Carnegie-Mellon_University_/6609821/1)
 ```
@@ -73,10 +71,38 @@ ACL, Proceedings of the Workshop on Human-Computer Question Answering
 2016.06
 ```
 
-#### [7] [Multiresolution recurrent neural networks: An application to dialogue response generation]()
+#### [7] [Multiresolution recurrent neural networks: An application to dialogue response generation](https://dl.acm.org/doi/10.5555/3298023.3298046)
 ```
-Authors: Iulian Serban, Tim Klinger, Gerald Tesauro, Kartik Talamadupula, Bowen Zhou, Yoshua Bengio, and Aaron Courville
-AAAI'17: Proceedings of the Thirty-First AAAI Conference on Artificial IntelligenceFebruary 2017 Pages 3288–3294
+Authors:
+    - Iulian Serban
+    - Tim Klinger
+    - Gerald Tesauro
+    - Kartik Talamadupula
+    - Bowen Zhou
+    - Yoshua Bengio
+    - Aaron Courville
+AAAI'17: 
+    Proceedings of the Thirty-First AAAI Conference on Artificial IntelligenceFebruary 2017
+    Pages 3288–3294
 ```
 
-#### [8] 
+#### [8] [Understanding Back-Translation at Scale](https://www.aclweb.org/anthology/D18-1045/)
+```
+(FAIR, Google Brain)
+Authors: Sergey Edunov, Myle Ott, Michael Auli, David Grangier
+ACL, EMNLP 2018.10~11
+```
+
+#### [9] [XLNet: Generalized Autoregressive Pretraining for Language Understanding](https://proceedings.neurips.cc/paper/2019/file/dc6a7e655d7e5840e66733e9ee67cc69-Paper.pdf)
+```
+Authors: (Carnegi Mellon, Google Brain)
+    - Zhilin Yang
+    - Zihang Dai
+    - Yiming Yang
+    - Jaime Carbonell
+    - Russ R Salakhutdinov
+    - Quoc V Le.
+neurips 2019
+```
+
+#### [10] []()
