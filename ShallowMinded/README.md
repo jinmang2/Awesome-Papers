@@ -42,3 +42,11 @@
 ### [20.11.10]
 
 ### [20.11.17] The hippocampus as a predictive map (17.10.02)
+
+### [20.11.30] [Population based training of neural networks](https://github.com/jinmang2/Awesome-Papers/blob/master/ShallowMinded/201130_PBT.md) (17.11.27)
+- Random Search와 Hand-Tuning의 hybrid 모델
+- 비동기적으로 Exploitation와 Exploration을 수행하는 worker를 도입하여 빠르게 최적의 hyperparamter를 찾는다.
+- DM Lab, Atari, 스타2, 기계 번역, GAN 등에서 SOTA를 뛰어넘었다.
+
+
+
