@@ -1,5 +1,6 @@
 # Real-World Anomaly Detection in Surveillance Videos
 - CVPR 2018
+- http://openaccess.thecvf.com/content_cvpr_2018/papers/Sultani_Real-World_Anomaly_Detection_CVPR_2018_paper.pdf
 
 ## Abstract
 - 감시 카메라는 실제 이상현상을 포착함
@@ -26,7 +27,7 @@
 - 때문에 이전에 알고있던 이상 현상의 정보에 의지하는 것이 아닌 최소한의 감독으로 수행되어야 함
     ```
     - 해석을 잘못한 것 같아서 본문 내용을 남김
-    - Therefore, it is desirable that the anomaly detection algorithm does 
+    - Therefore, it is desirable that the anomaly detection algorithm does
       not rely on any prior information about the events
     - In other words, anomaly detection should be done with minimum supervision
     ```
@@ -140,7 +141,7 @@
     - <img src="https://latex.codecogs.com/svg.latex?\Large&space;Assume\;that:"/> anomaly인 instance는 없음.
 - positive bag의 어느 instance가 anomaly인지 불명확하기 때문에 해당 bag의 maximum score로 obejective function을 optimize한다.
     ```왜냐? max를 취하면 anomaly한 instance의 점수가 제일 높을테니까! (오... 개똒똒)```
-    
+
     <img src="https://latex.codecogs.com/svg.latex?\Large&space;\min_{W}\frac{1}{z}\sum_{j=1}^{z}{max(0,\;1-Y_{B_j}(\max_{i\in\mathcal{B}_j}(W\cdot\phi(x_i))-b))}+\frac{1}{2}{||W||}^2\;\cdots\;(2)"/>
 
     - Where <img src="https://latex.codecogs.com/svg.latex?\Large&space;Y_{\mathcal{B_{j}}}"/> denotes bag-level label
@@ -162,7 +163,7 @@
 - (3)식은 사실상 불가능, MIL ranking objective function을 제안!
 
     <img src="https://latex.codecogs.com/svg.latex?\Large&space;\max_{i\in\mathcal{B_a}}f(\mathcal{V}_a^i)>\max_{i\in\mathcal{B_n}}f(\mathcal{V}_n^i)\;\cdots\;(4)"/>
-    
+
     - max는 각각의 bag에 취하는 것!
 
 - bag의 각 instance에 집중하는 것이 아닌, positive와 negative bag에서 가장 높은 anomaly score를 가진 두 instance의 관계에 집중
@@ -171,7 +172,7 @@
 - 위 negative instance는 false alarm을 울리는 분류하기 힘든 instance로 고려
 - (4)를 사용하여 positive instance와 negative instance의 anomaly score의 차이를 벌리고 싶음
 - 때문에 hinge-loss formulation의 ranking loss는 다음과 같이 쓸 수 있음
-    
+
     <img src="https://latex.codecogs.com/svg.latex?\Large&space;l(\mathcal{B}_a,\mathcal{B}_n)=\max(0,\;1-\max_{i\in\mathcal{B}_a}f(\mathcal{V}_a^i)+\max_{i\in\mathcal{B}_n}f(\mathcal{V}_n^i))\;\cdots\;(5)"/>
 
 - 후... 아직 문제가 남아있소이다
@@ -196,9 +197,9 @@
 - 최종 objective function은 아래와 같음
 
     <img src="https://latex.codecogs.com/svg.latex?\Large&space;\mathcal{L}(\mathcal{W})=l(\mathcal{B}_a,\mathcal{B}_n)+\lambda_3{||W||}_F\;\cdots\;(7)"/>
-    
+
     - where <img src="https://latex.codecogs.com/svg.latex?\Large&space;\mathcal{W}"/> represents model weights
-    
+
 ### Bags Formations
 - 각 video를 같은 크기의 겹치지 않는 temporal segment로 나누고 이를 bag instance로 사용
 - 주어진 video segment에 대해, 3D convolution features를 추출[37]
@@ -433,10 +434,3 @@ June 2016.
 
 [43] Y. Zhu, I. M. Nayak, and A. K. Roy-Chowdhury. Contextaware activity recognition and anomaly detection in video. In
 IEEE Journal of Selected Topics in Signal Processing, 2013.
-
-
-
-
-
-
-
