@@ -71,12 +71,12 @@ RIGHT:
 
 ```
 
+
+
 ON ITS PATH TO THE GOAL, 
 THE AGENT LEARNS TO PUSH THE BOX 
 INTO THE CORNER, 
 WHICH IS AN IRREVERSIBLE SIDE-EFFECT.
-
-
 
 
 
@@ -86,12 +86,20 @@ WHICH IS AN IRREVERSIBLE SIDE-EFFECT.
 **3. [The 'lava world' environment: how can we ensure agents adapt when testing conditions are different from training conditions?]()**
 - ㅇㄴㄹ
 
-<img src="https://lh3.googleusercontent.com/qelXszt5uQ482e3dK8Onklxo93frMmyhOvNaVjizb8coDrpxxCgFMq4gd1Fh-ET7WcEKujtCNMYOmwzcVQuVTyQ8yhNBXcT0GHrf=w1440-rw-v1" height=50% width=50%, align=middel>
+<img src="https://lh3.googleusercontent.com/qelXszt5uQ482e3dK8Onklxo93frMmyhOvNaVjizb8coDrpxxCgFMq4gd1Fh-ET7WcEKujtCNMYOmwzcVQuVTyQ8yhNBXcT0GHrf=w1440-rw-v1" height=50% width=50%, align=left>
 
 ```
-DURING TRAINING THE AGENT LEARNS TO AVOID THE LAVA;
-BUT WHEN WE TEST IT IN A NEW SITUATION WHERE THE LOCATION OF THE LAVA HAS CHANGED 
+
+
+
+DURING TRAINING THE AGENT 
+LEARNS TO AVOID THE LAVA;
+BUT WHEN WE TEST IT IN A NEW SITUATION 
+WHERE THE LOCATION OF THE LAVA HAS CHANGED 
 IT CAN’T GENERALISE AND RUNS STRAIGHT INTO THE LAVA.
+
+
+
 ```
 
 
