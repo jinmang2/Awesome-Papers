@@ -48,5 +48,8 @@
 - 비동기적으로 Exploitation와 Exploration을 수행하는 worker를 도입하여 빠르게 최적의 hyperparamter를 찾는다.
 - DM Lab, Atari, 스타2, 기계 번역, GAN 등에서 SOTA를 뛰어넘었다.
 
-
+### [20.12.01] [Specifying AI safety problems in simple environments](https://github.com/jinmang2/Awesome-Papers/blob/master/ShallowMinded/201201_SafetyAI.md) (17.11.28)
+- AI의 발전과 더불어 Safety AI의 발전도 가속화되나 기존엔 Unsafe한 행동의 본질과 원인에 대한 이론적인 이해에 치중했었음
+- 본 논문에서 소개하는 9가지 `gridworlds` 환경은 이러한 Safety AI를 test할 기본적인 환경이고 이 중 3가지 환경에 대해 A2C, Rainbow-DQN으로 실험해봤으나 design 문제로 잘 동작하지 않았음
+- 위 실패를 밑거름으로 이러한 실용적인 환경 개발과 더불어 Safety AI 개발에 더욱 착수할 
 
