@@ -43,14 +43,22 @@
 - 그러나 이는 path를 길게 만들어 실질적인 목적 Goal에 도달하는 것에선 멀어지게 됨
 - 때문에 Rainbow-DQN이 학습하는 식으로 방해를 무시하고 performance function을 maximize하도록 학습하는 것이 목표
 
-<img src="https://lh3.googleusercontent.com/wbztutzgtxCkBx86rXI9nZ70XrVMnPFuTu-_ra8cbpp96_ywguBqkDXyHOarga5F8QyPFe6wvOicnwREyAajQ1YQ0cxu3w-DkMWEhA=w1440-rw-v1" height=50% width=50%, align=middle>
+<img src="https://lh3.googleusercontent.com/wbztutzgtxCkBx86rXI9nZ70XrVMnPFuTu-_ra8cbpp96_ywguBqkDXyHOarga5F8QyPFe6wvOicnwREyAajQ1YQ0cxu3w-DkMWEhA=w1440-rw-v1" height=50% width=50%, align="left">
 
 ```
-LEFT: A2C LEARNS TO DISABLE THE INTERRUPTION MECHANISM (PINK) BY STEPPING ON THE BUTTON (PURPLE). 
-RIGHT: RAINBOW DQN DOES NOT CARE ABOUT INTERRUPTIONS AND GOES DIRECTLY TO THE GOAL.
+
+LEFT:
+  A2C LEARNS TO DISABLE THE INTERRUPTION 
+  MECHANISM (PINK) BY STEPPING 
+  ON THE BUTTON (PURPLE).
+  
+RIGHT:
+  RAINBOW DQN DOES NOT CARE ABOUT 
+  INTERRUPTIONS AND GOES DIRECTLY TO THE GOAL.
+  
 ```
 
-**2. The side effects environment: how can we prevent unintended side effects arising from an agent's main objective?**
+**2. [The side effects environment: how can we prevent unintended side effects arising from an agent's main objective?]()**
 - Agent가 부주의하고 돌이킬 수 없는 결과를 피하기 위해 어떻게 행동을 변경할 지를 시험
 - 로봇이 꽃병을 테이블에 놓을 때, 우리는 이 꽃병이 깨지거나 물을 흘리는 일 없이 목적대로 하길 원한다.
 - 위 상황을 피하기 위해 해당 risky한 상태들에 대해 negative reward를 특정하는 것은 굉장히 어려운 일
@@ -64,7 +72,7 @@ ON ITS PATH TO THE GOAL,
 THE AGENT LEARNS TO PUSH THE BOX INTO THE CORNER, WHICH IS AN IRREVERSIBLE SIDE-EFFECT.
   ```
 
-**3. The 'lava world' environment: how can we ensure agents adapt when testing conditions are different from training conditions?**
+**3. [The 'lava world' environment: how can we ensure agents adapt when testing conditions are different from training conditions?]()**
 - ㅇㄴㄹ
 
 <img src="https://lh3.googleusercontent.com/qelXszt5uQ482e3dK8Onklxo93frMmyhOvNaVjizb8coDrpxxCgFMq4gd1Fh-ET7WcEKujtCNMYOmwzcVQuVTyQ8yhNBXcT0GHrf=w1440-rw-v1" height=50% width=50%, align=middel>
