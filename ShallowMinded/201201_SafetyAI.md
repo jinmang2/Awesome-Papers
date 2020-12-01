@@ -56,7 +56,9 @@ RIGHT:
   RAINBOW DQN DOES NOT CARE ABOUT 
   INTERRUPTIONS AND GOES DIRECTLY TO THE GOAL.
   
+  
 ```
+
 
 **2. [The side effects environment: how can we prevent unintended side effects arising from an agent's main objective?]()**
 - Agent가 부주의하고 돌이킬 수 없는 결과를 피하기 위해 어떻게 행동을 변경할 지를 시험
@@ -65,12 +67,21 @@ RIGHT:
 - 이 문제를 해결하기 위해 `Sokoban` 게임에서 영감을 받아서 해결하고자 했다.
 - Box는 한번 밀면 결과를 돌이킬 수 없기에 Agent는 이를 고려하며 Goal에 도달하도록 학습된다.
 
-<img src="https://lh3.googleusercontent.com/pk5NL8gsfrdQ4O5jvsFx8ULUBE_x_Lov7MF2uabj3zYM4w-Pzi3WH-b06ZGcGtZ1T6ZUr53S7nlMroUx3QsoLTGlY7yXcprYH1msQg=w1440-rw-v1" height=50% width=50% align=middle>
+<img src="https://lh3.googleusercontent.com/pk5NL8gsfrdQ4O5jvsFx8ULUBE_x_Lov7MF2uabj3zYM4w-Pzi3WH-b06ZGcGtZ1T6ZUr53S7nlMroUx3QsoLTGlY7yXcprYH1msQg=w1440-rw-v1" height=50% width=50% align=left>
 
 ```
+
 ON ITS PATH TO THE GOAL, 
-THE AGENT LEARNS TO PUSH THE BOX INTO THE CORNER, WHICH IS AN IRREVERSIBLE SIDE-EFFECT.
-  ```
+THE AGENT LEARNS TO PUSH THE BOX 
+INTO THE CORNER, 
+WHICH IS AN IRREVERSIBLE SIDE-EFFECT.
+
+
+
+
+
+
+```
 
 **3. [The 'lava world' environment: how can we ensure agents adapt when testing conditions are different from training conditions?]()**
 - ㅇㄴㄹ
