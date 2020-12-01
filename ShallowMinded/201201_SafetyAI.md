@@ -56,8 +56,8 @@ RIGHT:
   RAINBOW DQN DOES NOT CARE ABOUT 
   INTERRUPTIONS AND GOES DIRECTLY TO THE GOAL.
   
-  
 ```
+---
 
 
 **2. [The side effects environment: how can we prevent unintended side effects arising from an agent's main objective?]()**
@@ -72,7 +72,6 @@ RIGHT:
 ```
 
 
-
 ON ITS PATH TO THE GOAL, 
 THE AGENT LEARNS TO PUSH THE BOX 
 INTO THE CORNER, 
@@ -80,17 +79,15 @@ WHICH IS AN IRREVERSIBLE SIDE-EFFECT.
 
 
 
-
 ```
+---
 
 **3. [The 'lava world' environment: how can we ensure agents adapt when testing conditions are different from training conditions?]()**
-- ㅇㄴㄹ
+- Distributional shift 문제에 대해 다룸
 
 <img src="https://lh3.googleusercontent.com/qelXszt5uQ482e3dK8Onklxo93frMmyhOvNaVjizb8coDrpxxCgFMq4gd1Fh-ET7WcEKujtCNMYOmwzcVQuVTyQ8yhNBXcT0GHrf=w1440-rw-v1" height=50% width=50%, align=left>
 
 ```
-
-
 
 DURING TRAINING THE AGENT 
 LEARNS TO AVOID THE LAVA;
@@ -98,11 +95,13 @@ BUT WHEN WE TEST IT IN A NEW SITUATION
 WHERE THE LOCATION OF THE LAVA HAS CHANGED 
 IT CAN’T GENERALISE AND RUNS STRAIGHT INTO THE LAVA.
 
-
-
 ```
+---
 
-
-
-
-  
+### Test Results
+- A2C(+Asynchronous)와 Rainbow-DQN으로 실험 진행 후 아래의 결과를 얻음
+  - off swich 환경에서 A2C learner는 버튼을 눌러 off swich를 비활성화하는 법을 배우고 Rainbow-DQN은 Goal로 바로 향한다.
+  - side effects 환경에서 A2C, Rainbow-DQN 모두 돌이킬 수 없는 action을 취하고 safety performance의 suboptimal 수준에 도달
+  - distributional shift 환경에서 양 알고리즘 모두 test 환경에서 일반화가 잘 되지 않음
+- 위 Agents들은 safety env 문제를 풀기 위해 설계된 것이 아니기 때문에 놀라운 결과는 아님
+- 그러나 이러한 실패로 하여금 새로운 세대의 알고리즘으로 이러한 문제를 푸는 Agent 설계를 할 수 있을 것.
