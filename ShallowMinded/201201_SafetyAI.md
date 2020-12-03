@@ -43,19 +43,15 @@
 - 그러나 이는 path를 길게 만들어 실질적인 목적 Goal에 도달하는 것에선 멀어지게 됨
 - 때문에 Rainbow-DQN이 학습하는 식으로 방해를 무시하고 performance function을 maximize하도록 학습하는 것이 목표
 
-<img src="https://lh3.googleusercontent.com/wbztutzgtxCkBx86rXI9nZ70XrVMnPFuTu-_ra8cbpp96_ywguBqkDXyHOarga5F8QyPFe6wvOicnwREyAajQ1YQ0cxu3w-DkMWEhA=w1440-rw-v1" height=50% width=50%, align="left">
+<img src="https://lh3.googleusercontent.com/wbztutzgtxCkBx86rXI9nZ70XrVMnPFuTu-_ra8cbpp96_ywguBqkDXyHOarga5F8QyPFe6wvOicnwREyAajQ1YQ0cxu3w-DkMWEhA=w1440-rw-v1" height=50% width=50%>
 
 ```
-
 LEFT:
-  A2C LEARNS TO DISABLE THE INTERRUPTION 
-  MECHANISM (PINK) BY STEPPING 
+  A2C LEARNS TO DISABLE THE INTERRUPTION MECHANISM (PINK) BY STEPPING 
   ON THE BUTTON (PURPLE).
   
 RIGHT:
-  RAINBOW DQN DOES NOT CARE ABOUT 
-  INTERRUPTIONS AND GOES DIRECTLY TO THE GOAL.
-  
+  RAINBOW DQN DOES NOT CARE ABOUT INTERRUPTIONS AND GOES DIRECTLY TO THE GOAL.
 ```
 ---
 
@@ -67,34 +63,24 @@ RIGHT:
 - 이 문제를 해결하기 위해 `Sokoban` 게임에서 영감을 받아서 해결하고자 했다.
 - Box는 한번 밀면 결과를 돌이킬 수 없기에 Agent는 이를 고려하며 Goal에 도달하도록 학습된다.
 
-<img src="https://lh3.googleusercontent.com/pk5NL8gsfrdQ4O5jvsFx8ULUBE_x_Lov7MF2uabj3zYM4w-Pzi3WH-b06ZGcGtZ1T6ZUr53S7nlMroUx3QsoLTGlY7yXcprYH1msQg=w1440-rw-v1" height=50% width=50% align=left>
+<img src="https://lh3.googleusercontent.com/pk5NL8gsfrdQ4O5jvsFx8ULUBE_x_Lov7MF2uabj3zYM4w-Pzi3WH-b06ZGcGtZ1T6ZUr53S7nlMroUx3QsoLTGlY7yXcprYH1msQg=w1440-rw-v1" height=50% width=50%>
 
 ```
-
-
-ON ITS PATH TO THE GOAL, 
-THE AGENT LEARNS TO PUSH THE BOX 
-INTO THE CORNER, 
-WHICH IS AN IRREVERSIBLE SIDE-EFFECT.
-
-
-
+ON ITS PATH TO THE GOAL, THE AGENT LEARNS TO PUSH THE BOX 
+INTO THE CORNER, WHICH IS AN IRREVERSIBLE SIDE-EFFECT.
 ```
 ---
 
 **3. [The 'lava world' environment: how can we ensure agents adapt when testing conditions are different from training conditions?]()**
 - Distributional shift 문제에 대해 다룸
 
-<img src="https://lh3.googleusercontent.com/qelXszt5uQ482e3dK8Onklxo93frMmyhOvNaVjizb8coDrpxxCgFMq4gd1Fh-ET7WcEKujtCNMYOmwzcVQuVTyQ8yhNBXcT0GHrf=w1440-rw-v1" height=50% width=50%, align=left>
+<img src="https://lh3.googleusercontent.com/qelXszt5uQ482e3dK8Onklxo93frMmyhOvNaVjizb8coDrpxxCgFMq4gd1Fh-ET7WcEKujtCNMYOmwzcVQuVTyQ8yhNBXcT0GHrf=w1440-rw-v1" height=50% width=50%>
 
 ```
-
-DURING TRAINING THE AGENT 
-LEARNS TO AVOID THE LAVA;
+DURING TRAINING THE AGENT LEARNS TO AVOID THE LAVA;
 BUT WHEN WE TEST IT IN A NEW SITUATION 
 WHERE THE LOCATION OF THE LAVA HAS CHANGED 
 IT CAN’T GENERALISE AND RUNS STRAIGHT INTO THE LAVA.
-
 ```
 ---
 
