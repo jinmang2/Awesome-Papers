@@ -53,3 +53,12 @@
 - 본 논문에서 소개하는 9가지 `gridworlds` 환경은 이러한 Safety AI를 test할 기본적인 환경이고 이 중 3가지 환경에 대해 A2C, Rainbow-DQN으로 실험해봤으나 design 문제로 잘 동작하지 않았음
 - 위 실패를 밑거름으로 이러한 실용적인 환경 개발과 더불어 Safety AI 개발에 더욱 착수할 
 
+### [20.12.04] Collaborating with patients for better outcomes (17.12.19)
+- NHS에서 10년 동안 doctor로 근무하시고 해당 주에 DeepMind Health에서 근무하며 쓴 포스팅
+- 치료는 환자에게 행하는 것이 아니라 관련된 모든이들이 형성하는 것이다 라고 말하며 DeepMind에서의 경험이 놀랍다고 포스팅을 진행한다.
+- 전문가들과 일하고 환자들을 초청하여 피드백을 듣고 다른 기관(C4CC)과 협력하며 일하는 등 좋은 글들을 써놓고 있지만...
+- 링크의 유튜브 댓글에 보면 open source를 공개하라! suleyman은 sold out됐다, 니 개인정보 다 팔아먹어도 괜찮냐, DeepMind는 돈 있는 사람들만 살린다 등 긍정적으로만 보는 반응은 (당시에) 좀 드문 모양인 것 같다
+- NHS 관련은 모르는 도메인이라 이해하기가 좀 어렵네 포스팅 읽으면서 관련 기사 찾아보자
+
+### [20.12.07] [2017: DeepMind's year in review](https://github.com/jinmang2/Awesome-Papers/blob/master/ShallowMinded/201207_DeepMind's2017.md)
+- 17년도 DeepMind의 활동 
