@@ -185,8 +185,13 @@ Word Representations: A Simple and General Method for Semi-Supervised Learning
 
 ## :brain: Reinforcement Learning
 
-### Theoretical
 - [x] **Policy Gradient Theorem** *Policy Gradient Methods for Reinforcement Learning with Function Approximation* (NIPS 2000) [paper](https://papers.nips.cc/paper/1713-policy-gradient-methods-for-reinforcement-learning-with-function-approximation.pdf)
+- [ ] *Deterministic Policy Gradient Algorithm*
+- [ ] *Continuous Control with Deep Reinforcement Learning*
+- [ ] *Approximetely Optimal Approximate Reinforcement Learning*
+- [ ] *True Region Policy Optimization*
+- [ ] *Proximal Policy Optimization Algorithms*
+
 
 ### RL.start() 오늘의 논문 series
 - [ ] *ACCELERATED METHODS FOR DEEP REINFORCEMENT LEARNING* () [paper](https://arxiv.org/pdf/1803.02811.pdf)
