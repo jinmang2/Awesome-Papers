@@ -3,53 +3,86 @@
 ## :question: Objective of `jinmang2/Awesome-Papers` Repo.
 :bulb: To be AI Researcher,  Artist and Good Person...!!
 
-## 2020 Reading Papers
-
-**Reinforcement Learning**
-- Asynchronous Methods for Deep Reinforcement Learning
-- Continuous Control With Deep Reinforcement Learning
-- Deterministic Policy Gradient Algorithms
-- Policy Gradient Methods for Reinforcement Learning with Function Approximation
-- Approximately Optimal Approximate Reinforcement Learning
-- True Region Policy Optimiation
-- Proximal Policy Optimization Algorithms
-
-**Meta-Learning**
-- Model-Agnostic Meta-Learning for Fast Adaptation of Deep Networks
+## 2021 Papers to Read
 - Learning to Learn without Gradient Descent by Gradient Descent
 - Massively Multitask Networks for Drug Discovery
 - One-Shot Imitation Learning
 - Few-Shot Autoregressive Density Estimation: Towards Learning to Learn Distributions
 - Meta-Learning for Low-Resource Neural Machine Translation
 - Multi-Task Learning Using Uncertainty to Weigh Losses for Scene Geometry and Semantics
+- SYNTHESIZER: Rethinking Self-Attention in Transformer Models
+- Fine-tune BERT for Extractive Summarization
+- ALBERT: A Lite BERT for Self-Supervised Learning of Language Representations
+- Is MAP Decoding All You Need? The Inadequacy of the Mode in Neural Machine Translation
+
+## 2020 Reading Papers
+- 대충 쓱 본 논문은 기재하지 않음
+- 전체 논문을 다 읽고 나 스스로 다른 정보까지 찾아본 논문들만 기재
+- 예를 들어, word2vec같은 경우 개념은 알고 있지만 paper로 뜯어보진 않았기 때문에 기재하지 않음
+
+**Reinforcement Learning**
+- Asynchronous Methods for Deep Reinforcement Learning
+  - `A3C`, `DeepMind & Montreal`
+- Continuous Control With Deep Reinforcement Learning
+  - `DDPG`, `DQN+DPG`, `Replay Buffer`, `Soft-Update via Polyak Averaging`, `Ornstein Uhlenbeck process`, `White Gaussian Random process`, `DeepMind`
+- Deterministic Policy Gradient Algorithms
+  - `DeepMind`, `Policy Gradient`, `Actor-Critic`, `Deterministic Policy`
+- Policy Gradient Methods for Reinforcement Learning with Function Approximation
+  - `Compatible Function Approximation`, `Policy Gradient`, `Sutton`
+- Approximately Optimal Approximate Reinforcement Learning
+  - `Kakade & Langford`, `Mixture Policy`, `Policy Improvement`
+- True Region Policy Optimiation
+  - `Trust Region`, `Natural Policy`, `Kakade & Langford Thm`, `Policy Improvement`, `OpenAI`
+- Proximal Policy Optimization Algorithms
+  - `OpenAI`, `Practical TRPO`, `Clip Gradient`
+
+**Meta-Learning**
+- Model-Agnostic Meta-Learning for Fast Adaptation of Deep Networks
+  - `MAML`, `Optimization-Based Meta-Learning`
 
 **NLP**
 - Efficient Estimation of Word Representations in Vector Space
+  - `Word2Vec`, `CBOW`, `Skip-Gram`
 - Distributed Representations of Words and Phrases and their Compositionality
+  - `Enhanced vec repr quality`, `SubSampling`, `Negative Sampling`, `Hierarchical Softmax`
 - Deep contextualized word representations
+  - `ELMo`, `Feature-Based`, `Pre-ELMo + Linear Combination`, `SubWord Information by ConvNet`
 - BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding
+  - `Transformer's Encoder`, `MLM`, `NSP`
 - Neural Machine Translatoin By Jointly Learning to Align and Translate
+  - `GRU`, `Seq2Seq with Attention`, `Bahnau Attention`
 - Attention Is All You Need
+  - `Transformers`, `Self-Dot Product Attention`, `Seq2Seq`
 - Advances in Pre-Training Distributed Word Representations
+  - `FastText`
 - Enriching Word Vectors with Subword Information
+  - `FastText`
 - Minimum Risk Training for Neural Machine Translation
-- SYNTHESIZER: Rethinking Self-Attention in Transformer Models
-- ALBERT: A Lite BERT for Self-Supervised Learning of Language Representations
-- Fine-tune BERT for Extractive Summarization
+  - `MRT`, `NMT`
 - Bag of Tricks for Efficient Text Classification
+  - `FastText for Text Classification`, `Fast!`
 - A Fast and Accurate Dependency Parsing using Neural Networks
+  - `Parsing`
 - MaltParser: A Data-Driven Parser-Generator for Dependency Parsing
+  - `Parsing`
 - Incrementality in Deterministic Dependency Parsing
+  - `Parsing`
 - A Neural Probabilistic Language Model
+  - `NPLM`
 - Universal Language Model Fine-tuning for Text Classification
+  - `ULMFit`, `Fine-Tuning`
 - The Natural Language Decathlon: Multitask Learning as Question Answering
+  - `MultiTask Learning`, `anti-curriculum learning`
 - Phrase-Based & Neural Unsupervised Machine Translation
-- Is MAP Decoding All You Need? The Inadequacy of the Mode in Neural Machine Translation
+  - `Initialization`, ``, `Back-Translation`
 - A Structured Self-Attentive Sentence Embedding
+  - `Self-Attentive`
 
 **Graph**
 - Graph Attention Networks
+  - `GNN`, `Attention`
 - MAGNET: Multi-Label Text Classfication using Attention-based Graph Neural Network
+  - `GAT`, `MLTC`
 
 **Conversational AI**
 - Memory Networks
