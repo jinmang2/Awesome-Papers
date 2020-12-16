@@ -1,13 +1,60 @@
 # Awesome-Papers
-:bulb: To be AI Researcher
-- 내가 관심있는 연구분야의 SOTA 및 최신 연구 동향을 계속 조사하다 보면
-- 나만의 착안점, 개선할 점, contribution할 부분이 보일테니
-- !
 
 ## :question: Objective of `jinmang2/Awesome-Papers` Repo.
-```
-To be AI Researcher, Artist and Good Person...!!
-```
+:bulb: To be AI Researcher,  Artist and Good Person...!!
+
+## 2020 Reading Papers
+
+**Reinforcement Learning**
+- Asynchronous Methods for Deep Reinforcement Learning
+- Continuous Control With Deep Reinforcement Learning
+- Deterministic Policy Gradient Algorithms
+- Policy Gradient Methods for Reinforcement Learning with Function Approximation
+- Approximately Optimal Approximate Reinforcement Learning
+- True Region Policy Optimiation
+- Proximal Policy Optimization Algorithms
+
+**Meta-Learning**
+- Learning to Learn without Gradient Descent by Gradient Descent
+- Massively Multitask Networks for Drug Discovery
+- One-Shot Imitation Learning
+- Few-Shot Autoregressive Density Estimation: Towards Learning to Learn Distributions
+- Meta-Learning for Low-Resource Neural Machine Translation
+- Multi-Task Learning Using Uncertainty to Weigh Losses for Scene Geometry and Semantics
+
+**NLP**
+- Advances in Pre-Training Distributed Word Representations
+- Enriching Word Vectors with Subword Information
+- Minimum Risk Training for Neural Machine Translation
+- SYNTHESIZER: Rethinking Self-Attention in Transformer Models
+- ALBERT: A Lite BERT for Self-Supervised Learning of Language Representations
+- Fine-tune BERT for Extractive Summarization
+- Bag of Tricks for Efficient Text Classification
+- A Fast and Accurate Dependency Parsing using Neural Networks
+- MaltParser: A Data-Driven Parser-Generator for Dependency Parsing
+- Incrementality in Deterministic Dependency Parsing
+- A Neural Probabilistic Language Model
+- Universal Language Model Fine-tuning for Text Classification
+- The Natural Language Decathlon: Multitask Learning as Question Answering
+- Phrase-Based & Neural Unsupervised Machine Translation
+- Is MAP Decoding All You Need? The Inadequacy of the Mode in Neural Machine Translation
+
+**Graph**
+- Graph Attention Networks
+- MAGNET: Multi-Label Text Classfication using Attention-based Graph Neural Network
+
+**Conversational AI**
+- Memory Networks
+- End-To-End Memory Networks
+- Learning Through Dialogue Interactions By Asking Questions
+- Hierarchical Attention Networks for Document Classification
+- Conversational Decision-Making Model for Predicting the King's Decision in the Annals of the Joseon Dynasty
+
+**Fundamental**
+- Decoupled Neural Interfaces using Synthetic Gradients
+- Decoupled Weight Decay Regularization
+- Neural Network Ensembles, Cross Validation, and Active Learning
+- Sharp Minima Can Generalize For Deep Nets
 
 ## :office: NLP
 
