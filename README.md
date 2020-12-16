@@ -15,6 +15,7 @@
 - Proximal Policy Optimization Algorithms
 
 **Meta-Learning**
+- Model-Agnostic Meta-Learning for Fast Adaptation of Deep Networks
 - Learning to Learn without Gradient Descent by Gradient Descent
 - Massively Multitask Networks for Drug Discovery
 - One-Shot Imitation Learning
@@ -23,6 +24,12 @@
 - Multi-Task Learning Using Uncertainty to Weigh Losses for Scene Geometry and Semantics
 
 **NLP**
+- Efficient Estimation of Word Representations in Vector Space
+- Distributed Representations of Words and Phrases and their Compositionality
+- Deep contextualized word representations
+- BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding
+- Neural Machine Translatoin By Jointly Learning to Align and Translate
+- Attention Is All You Need
 - Advances in Pre-Training Distributed Word Representations
 - Enriching Word Vectors with Subword Information
 - Minimum Risk Training for Neural Machine Translation
@@ -38,6 +45,7 @@
 - The Natural Language Decathlon: Multitask Learning as Question Answering
 - Phrase-Based & Neural Unsupervised Machine Translation
 - Is MAP Decoding All You Need? The Inadequacy of the Mode in Neural Machine Translation
+- A Structured Self-Attentive Sentence Embedding
 
 **Graph**
 - Graph Attention Networks
@@ -55,6 +63,13 @@
 - Decoupled Weight Decay Regularization
 - Neural Network Ensembles, Cross Validation, and Active Learning
 - Sharp Minima Can Generalize For Deep Nets
+- Long short-term memory
+- Highway Networks
+- Recurrent Highway Networks
+
+**ETC**
+- LSTM-SAE Unsupervised Pre-training of a Deep LSTM-based Stacked Autoencoder for Multivariate Time Series Forecasting Problems
+- C3D Learning Spatiotemporal Features with 3D Convolutional Networks
 
 ## :office: NLP
 
