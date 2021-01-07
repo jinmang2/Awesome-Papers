@@ -62,3 +62,24 @@
 
 ### [20.12.07] [2017: DeepMind's year in review](https://github.com/jinmang2/Awesome-Papers/blob/master/ShallowMinded/201207_DeepMind's2017.md)
 - 17년도 DeepMind의 활동 
+
+### [21.01.07] Measuring abstract reasoning in neural networks (18.07.11)
+- Abstract Reasoning은 General Intelligence에 굉장히 중요! (아르키메데스의 유레카를 떠올려봐라!)
+- 바둑에서 세계 챔피온을 이겼지만, 삼각형만 계산하도록 특별히 훈련된 경우 사각형 혹은 이전에 발견되지 않은 다른 물체는 계산하지 못할 수 잇음
+- 따라서 신경망이 더 우수한 지능적인 시스템을 구축할 수 있게 인간 IQ Test에서 추상적인 추론을 측정하는 데 영감을 얻음
+- Paper는 ICML 2018 [Measuring abstract reasoning in neural networks](http://proceedings.mlr.press/v80/santoro18a/santoro18a.pdf)
+- 표준 인간 IQ test는 응시자(test-taker)가 일상 경험을 통해 배운 원칙을 적용하여 지각적으로 단순한 시각적 장면을 해석하도록 요구 e.g., 식물이 자라는 것을 관찰, 덧셈을 공부, 은행 잔고를 추적
+  - 이 후 퍼즐에 이 개념을 적용, 모양의 수, 크기 또는 색상의 강도가 순서에 따라 증가할 것이라고 추론
+- 아직은 real world에서 visual reasoning test에 지식을 어떻게 전이시키는가 (적용하는가)를 측정하는 것은 어려움
+  - real world -> visual reasoning problem (as in human tesing)이 어려우니
+  - one controlled set of visual reasoning problems to another로 실험 setting
+- 위를 위해 아래를 수행, 만일 test set에서 일반화가 잘 된다면 모델이 추상적인 개념을 추론하고 적용할 수 있는 능력을 갖출 수 있다고 판단 (과연?)
+  1. Question Generator를 구축! (abstract factors: progression & attributes: colour, size 등을 포함하는 matrix problem을 생성하는)
+  2. 위 generator가 접근할 수 있는 factor와 attribute의 조합을 제한함! (To measure how well models can generalise to held-out test sets)
+- 논문을 보면 여러 모델을 사용했음! (CNN-MLP, ResNet, LSTM) 그리고 가장 좋았던 모델은 Wild Relation Network (WReN)라고 함!
+- 최근 연구는 NN 기반의 용량 혹은 일반화 실패와 같은 강점과 약점을 파악하는데 주력
+- 본 연구에선 일반화에 대한 보편적인 결론을 도출하는 것이 도움이 되지 않을 수 있음을 보여줌
+- 각 모델은 특정 일반화 영역에선 잘 수행되었으나 다른 영역에선 열악했음
+  - 이 특정한 성공은 사용도니 모델의 아키텍처와 모델이 대답 선택에 대한 해석 가능한 "이유"를 제공하도록 훈련되었는지 등 여러 요인에 의해 결정
+- 실험 결과에서 보듯이 경험한 것을 넘어서는 input값을 extrapolate하거나 익숙하지 않은 속성을 처리해야할 때 제대로 수행되지 않았음
+- Artificial General Intelligence의 길은 멀고도 험하다
