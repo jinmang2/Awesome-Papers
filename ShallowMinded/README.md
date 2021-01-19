@@ -83,3 +83,8 @@
   - 이 특정한 성공은 사용도니 모델의 아키텍처와 모델이 대답 선택에 대한 해석 가능한 "이유"를 제공하도록 훈련되었는지 등 여러 요인에 의해 결정
 - 실험 결과에서 보듯이 경험한 것을 넘어서는 input값을 extrapolate하거나 익숙하지 않은 속성을 처리해야할 때 제대로 수행되지 않았음
 - Artificial General Intelligence의 길은 멀고도 험하다
+
+### [21.01.19] [Predicting eye disease with Moorfields Eye Hospital](https://deepmind.com/blog/article/predicting-eye-disease-moorfields)
+- 증상이 발현되기 전 안구 질환 예측을 돕는 방안을 소개하는 포스팅
+- AI System을 적용하여 미리 증상을 예견하는게 어떤 이점을 가져오는지 설명
+- Moorfields, NHS와의 협력으로 이끌어낼 것이라고 
