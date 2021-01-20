@@ -84,7 +84,14 @@
 - 실험 결과에서 보듯이 경험한 것을 넘어서는 input값을 extrapolate하거나 익숙하지 않은 속성을 처리해야할 때 제대로 수행되지 않았음
 - Artificial General Intelligence의 길은 멀고도 험하다
 
-### [21.01.19] [Predicting eye disease with Moorfields Eye Hospital](https://deepmind.com/blog/article/predicting-eye-disease-moorfields)
+### [21.01.19] [Predicting eye disease with Moorfields Eye Hospital](https://deepmind.com/blog/article/predicting-eye-disease-moorfields) (18.11.05)
 - 증상이 발현되기 전 안구 질환 예측을 돕는 방안을 소개하는 포스팅
 - AI System을 적용하여 미리 증상을 예견하는게 어떤 이점을 가져오는지 설명
 - Moorfields, NHS와의 협력으로 이끌어낼 것이라고 
+
+### [21.01.20] [Scaling Streams with Google](https://deepmind.com/blog/announcements/scaling-streams-google) (18.11.13)
+- 의사와 간호사들을 지원해주는 mobile app, Streams 팀이 Google에 합류함을 알리는 글
+- DeepMind가 2014년 Google과 힘을 합친 이유는 구글의 힘을 빌려 더 넓은 세계에 혁신을 가져오고자 함이었고, data centre efficiency, Androi bettery life, tts 등을 선보이고 이제 Stream Team도 합류했다고 한다.
+- 안구 질환 예측, 초단위의 암 방사선 치료, 전자 기록으로 환자 악화상태 진단 등을 지원
+- Stream 팀은 전 NHS의 외과 의사이자 연구자인 Dominic King의 지도 하에 런던에서 연구를 진행한다고 함
+- 향후 몇 년동안 DeepMind는 AI는 단백질 폴딩에서 이미지 분석에 이르기까지 의료 진단, 약물 발견 등을 잠재적으로 개선할 것이라고 함
