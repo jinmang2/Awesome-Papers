@@ -95,3 +95,8 @@
 - 안구 질환 예측, 초단위의 암 방사선 치료, 전자 기록으로 환자 악화상태 진단 등을 지원
 - Stream 팀은 전 NHS의 외과 의사이자 연구자인 Dominic King의 지도 하에 런던에서 연구를 진행한다고 함
 - 향후 몇 년동안 DeepMind는 AI는 단백질 폴딩에서 이미지 분석에 이르기까지 의료 진단, 약물 발견 등을 잠재적으로 개선할 것이라고 함
+
+### [21.02.02] [How evolutionary selection can train more capable self-driving cars](https://deepmind.com/blog/article/how-evolutionary-selection-can-train-more-capable-self-driving-cars) (19.07.25)
+- waymo의 자율 주행차의 neural networks는 물체를 탐지하거나 다른 차들이 어떻게 움직일 지 예측하는 등 많은 task를 수행
+- 각기 모델을 fine-tuning하는 것은 보통 몇 주가 걸리고 연산량도 많이 필요함
+- DeepMind와 협력함으로써 waymo는 다윈의 진화론적 시점을 빌려 더 효과적으로 학습을 가능케 만듦
